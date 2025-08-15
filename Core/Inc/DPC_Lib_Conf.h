@@ -146,10 +146,14 @@
 #define  FAN_ON         LL_GPIO_SetOutputPin(FAN_GPIO_Port, FAN_Pin);
 #define  FAN_OFF        LL_GPIO_ResetOutputPin(FAN_GPIO_Port, FAN_Pin);
 #define  FAN_STATE      HAL_GPIO_ReadPin(FAN_GPIO_Port, FAN_Pin);
-
+// this is inrush
 #define  RELAY_ON       LL_GPIO_SetOutputPin(RELAY_GPIO_Port, RELAY_Pin);
 #define  RELAY_OFF      LL_GPIO_ResetOutputPin(RELAY_GPIO_Port, RELAY_Pin);
 #define  RELAY_STATE    HAL_GPIO_ReadPin(RELAY_GPIO_Port, RELAY_Pin);
+
+#define  MAINS_SW_ON       LL_GPIO_SetOutputPin(MAINS_SW_GPIO_Port, MAINS_SW_Pin);
+#define  MAINS_SW_OFF      LL_GPIO_ResetOutputPin(MAINS_SW_GPIO_Port, MAINS_SW_Pin);
+#define  MAINS_SW_STATE    HAL_GPIO_ReadPin(MAINS_SW_GPIO_Port, MAINS_SW_Pin);
 
 #define  LF_HS_ON       LL_GPIO_SetOutputPin(LF_OUTPUT_HS_port, LF_OUTPUT_HS_pin);
 #define  LF_HS_OFF      LL_GPIO_ResetOutputPin(LF_OUTPUT_HS_port, LF_OUTPUT_HS_pin);

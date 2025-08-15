@@ -79,8 +79,8 @@ DPC_FAULTERROR_LIST_TypeDef DPC_ProtectionDetect(void);
 
 //*** STRUCT DEFINITION BEGIN ***//
 DPC_CMNDAT_DataSet1_t Data_Set1; 
-DPC_CMNDAT_DataSet2_t Data_Set2; // need to add pre switch voltages so we can determine when to switch back
-DPC_CMNDAT_DataSet3_t Data_Set3;
+DPC_CMNDAT_DataSet2_t Data_Set2; 
+DPC_CMNDAT_DataSet3_t Data_Set3;// need to add pre switch voltages so we can determine when to switch back
 DPC_CMNDAT_PFC_RawData_t Data_adc; //***raw variable creation from data struct in DPC_CommonData.h
 DPC_CMNDAT_PFC_ControlData_t Control_Data; //***control variable creation from data struct in DPC_CommonData.h
 DPC_MTH_Average_t Data_Avg_IL1_avg_PFC; //***variable creation from data struct in DPC_Math.h
@@ -101,6 +101,7 @@ DPC_AVGCC_Avg3Channels_t Current_Control;
 DPC_LPCNTRL_VoltageControl_t PFC_VoltageControl;
 DPC_LPCNTRL_PhaseShedding_t PFC_PhaseShedding;
 DPC_LPCNTRL_Inrush_t PFC_Relay;
+DPC_LPCNTRL_Rly_t Mains_SW_Relay;
 DPC_LPCNTRL_Led_t PFC_Led;
 DPC_LPCNTRL_Fan_t PFC_Fan;
 DPC_LPCNTRL_Protection_t PFC_Protection;
@@ -1092,7 +1093,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
          }
     
     //*** Converter status update BEGIN ***//
-    DPC_LPCNTRL_ConverterStatusUpdate(&PFC_Led, &PFC_Relay, &PFC_Fan);
+    DPC_LPCNTRL_ConverterStatusUpdate(&PFC_Led, &PFC_Relay, &Mains_SW_Relay, &PFC_Fan);
     //*** Converter status update END ***//
 
     
@@ -1548,12 +1549,17 @@ DPC_FAULTERROR_LIST_TypeDef RetVal = NO_FAULT;
     { //Vbus DC UnderVoltage Protection
           RetVal |= ERROR_DC_UV;
        PFC_Protection.ubErrorCode =2;
+       
     }
   }
   
-  if (Control_Data.uhVinRmsVolt > Control_Data.uhVinRmsMax){ //Vac OverVoltage Protection
+  if ((Control_Data.uhVinRmsVolt > Control_Data.uhVinRmsMax) || (Control_Data.uhVinPreSwitchRms > Control_Data.uhVinRmsMax)){ //Vac OverVoltage Protection
      RetVal |= ERROR_AC_OV;
      PFC_Protection.ubErrorCode =3;
+     // right here is where we pull the relay
+     MAINS_SW_ON ;
+    
+
     }
   else{   
       if(PFC_Protection.ubInputLowVoltageTimerCount >= DPC_VIN_LOW_VOLTAGE_PROT_COUNT){ //Vac UnderVoltage Protection

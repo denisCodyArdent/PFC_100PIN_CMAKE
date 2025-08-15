@@ -291,7 +291,11 @@ void DPC_LPCNTRL_RelayControlInit(DPC_LPCNTRL_Inrush_t* pRelay){
    pRelay->RelayInrushState = IDLE;
 
 }
-
+void DPC_LPCNTRL_MainsSwControlInit(DPC_LPCNTRL_Rly_t* pRelay){
+  pRelay->RelayControl = DISABLE;
+  pRelay->PastConversionMode = DPC_INVERTER_MODE;
+  pRelay->PresentConversionMode = DPC_PFC_MODE;
+  }
 /**
 * @brief  DPC_LPCNTRL_ProtectionControlInit: Protections control init function.
 *         It performs the protections control init. 
@@ -382,6 +386,7 @@ void DPC_LPCNTRL_ProtectionControlCalibration(DPC_LPCNTRL_Protection_t* pProt, D
 * @note Function valid for STM32G4xx microconroller family  
 */
 void DPC_LPCNTRL_ConverterControlInit(DPC_LPCNTRL_ConverterControl_t* pConvCtrl){
+  // this is forced at the moment. 
    
    pConvCtrl->ConversionMode = DPC_PFC_MODE; // check for conversion mode ac-dc/dc-ac
    
@@ -458,7 +463,7 @@ void DPC_LPCNTRL_VoltageControlInit(DPC_LPCNTRL_VoltageControl_t* pVoltCtrl){
 *
 * @note Function valid for STM32G4xx microconroller family  
 */
-void DPC_LPCNTRL_ConverterStatusUpdate(DPC_LPCNTRL_Led_t* pLed, DPC_LPCNTRL_Inrush_t* pRelay, DPC_LPCNTRL_Fan_t* pFan){
+void DPC_LPCNTRL_ConverterStatusUpdate(DPC_LPCNTRL_Led_t* pLed, DPC_LPCNTRL_Inrush_t* pRelay,DPC_LPCNTRL_Rly_t* pMainsSw, DPC_LPCNTRL_Fan_t* pFan){
    
    pLed->GreenLed = LED_GREEN_STATE;
    pLed->RedLed = LED_RED_STATE;
@@ -466,7 +471,9 @@ void DPC_LPCNTRL_ConverterStatusUpdate(DPC_LPCNTRL_Led_t* pLed, DPC_LPCNTRL_Inru
    pLed->BlueLed = LED_BLUE_STATE;
    pFan->FanState1 = FAN_STATE;
    pRelay->Relay = RELAY_STATE;
-  
+   pMainsSw->Relay =MAINS_SW_STATE ;
+
+
 }
 
 

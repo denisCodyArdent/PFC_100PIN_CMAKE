@@ -177,7 +177,7 @@ typedef struct{
 }DPC_LPCNTRL_Protection_t;
 
 
-
+// generalised this struture to work for relays
 typedef struct{
   
   GPIO_PinState Relay;
@@ -200,14 +200,14 @@ typedef struct{
 }DPC_LPCNTRL_ConverterControl_t;
 
 
-typedef struct{
-  
+typedef struct{ // this allows for condtional stotage of conversion state which dictates mains Sw Position
   GPIO_PinState Relay;
   FunctionalState RelayControl;
-  DPC_LPCNTRL_SubStateMachine_t RelayInrushState;
-  DPC_LPCNTRL_ConverterControl_t ConverterControl;
 
-}DPC_LPCNTRL_MainsRly_t;
+   DPC_LPCNTRL_ConversionMode_t PastConversionMode;
+   DPC_LPCNTRL_ConversionMode_t PresentConversionMode;
+   
+ }DPC_LPCNTRL_Rly_t;
 
 typedef struct{
   

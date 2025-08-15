@@ -51,50 +51,50 @@
 //******************************************************************************
 
 ///*** I/O ----------------------------------------- 
-///// AC Parameters (1°)
-#define    DPC_VIN_MAX            265    // Max input voltage [Expressed in Volt]
+///// ACï¿½Parametersï¿½(1ï¿½)
+#define    DPC_VIN_MAX            270    // Max input voltage [Expressed in Volt]
 #define    DPC_VIN_MIN_DER        230    // Derating input voltage for power limitation [Expressed in Volt]
-#define    DPC_VIN_MIN             90    // Min input voltage for US range [Expressed in Volt]
-///// DC Parameters (2°)
+#define    DPC_VIN_MIN             180   // Min input voltage for India range [Expressed in Volt]
+///// DCï¿½Parametersï¿½(2ï¿½)
 #define    DPC_VBUS_REF_DEFAULT      400// NominalDefault output voltage [Expressed in Volt]
-#define    DPC_POUT 	            7000    // Nominal output power [Expressed in Watts]
+#define    DPC_POUT 	            1000    // Nominal output power [Expressed in Watts]
 #define    DPC_EFF 	            0.98    // Target minimum efficiency at full load
 #define    DPC_PF 	            0.99    // Target minimum PF at full load
 
-///*** Sensing (2°) -------------------------------
-//// AC Section (1°)
-#define    DPC_VAC_GAIN             5.979053678    // Input voltage sensing gain [Expressed in bits/Volts]
-#define    DPC_IL_TOT_GAIN          25.44484848    // Total Inductor current sensing sensitivity [Expressed in bits/Ampere]
+///*** Sensing (2ï¿½) -------------------------------
+//// ACï¿½Sectionï¿½(1ï¿½)
+#define    DPC_VAC_GAIN             8.875   // Input voltage sensing gain [Expressed in bits/Volts]
+#define    DPC_IL_TOT_GAIN          50.4    // Total Inductor current sensing sensitivity [Expressed in bits/Ampere]
 #define    DPC_IZERO_OFFSET_IL      2048           // Inductor current sensing zero-current offset [Expressed in bits]
-#define    DPC_IL_GAIN              82.74746647    // Single Inductor current sensing sensitivity [Expressed in bits/Ampere]
-//// DC Section (2°)
-#define    DPC_VBUS_GAIN            5.979053678    // Vbus voltage sensing gain [Expressed in bits/Volts]
+#define    DPC_IL_GAIN              50.4    // Single Inductor current sensing sensitivity [Expressed in bits/Ampere]
+//// DCï¿½Sectionï¿½(2ï¿½)
+#define    DPC_VBUS_GAIN           8.875   // Vbus voltage sensing gain [Expressed in bits/Volts]
 #define    DPC_IZERO_OFFSET_IDC     2048           // DC current sensing zero-current offset [Expressed in bits]
-#define    DPC_IDC_GAIN             54.61333333    // DC current sensing sensitivity [Expressed in bits/Ampere]
+#define    DPC_IDC_GAIN             50.4    // DC current sensing sensitivity [Expressed in bits/Ampere]
 
-///*** CTRL (3°) -------------------------------
-//// Voltage Control (1°)
-#define    DPC_KP_VDC               0.072064	// Proportional gain of Vbus voltage PI regulator
+///*** CTRL (3ï¿½) -------------------------------
+//// Voltageï¿½Control (1ï¿½)
+#define    DPC_KP_VDC               0.052064	// Proportional gain of Vbus voltage PI regulator
 #define    DPC_KI_VDC        	    10.480219	// Integral gain of Vbus voltage PI regulator
-//// Vbus update (2°)
-#define    DPC_VBUS_REF_MAX 	     500.0     	// Max voltage value for Vbus update control [Expressed in Volt]
-#define    DPC_VBUS_REF_MIN 	     390.0     	// Min voltage value for Vbus update control [Expressed in Volt]
-//// Current Control (3°)
+//// Vbus update (2ï¿½)
+#define    DPC_VBUS_REF_MAX 	     460.0     	// Max voltage value for Vbus update control [Expressed in Volt]
+#define    DPC_VBUS_REF_MIN 	     380.0     	// Min voltage value for Vbus update control [Expressed in Volt]
+//// Currentï¿½Control (3ï¿½)
 #define    DPC_SWITCHING_FREQUENCY  65000        // Switching frequency of driving signals [Expressed in Hz]
-#define    DPC_IPK_REF_MAX           46.0        // Upper current limit for voltage-loop output [Expressed in Ampere]
+#define    DPC_IPK_REF_MAX           14        // Upper current limit for voltage-loop output [Expressed in Ampere]
 #define    DPC_IPK_REF_MIN            0.0        // Lower current limit for voltage-loop output [Expressed in Ampere]
-#define    DPC_IPK_REF_BURST          2.0        // Peak current reference during burst-mode operation (open-loop) [Expressed in Ampere]
+#define    DPC_IPK_REF_BURST          1.0       // Peak current reference during burst-mode operation (open-loop) [Expressed in Ampere]
 #define    DPC_KP_IAC             0.854364	 // Proportional gain of Iac current PI regulator
 #define    DPC_KI_IAC 	          10201.05       // Integral gain of Iac current PI regulator
 
-///*** Protection (3°) -------------------------------
-//// AC Section (1°)
+///*** Protection (3ï¿½) -------------------------------
+//// ACï¿½Sectionï¿½(1ï¿½)
 #define    DPC_OCP_EN                      true  // Inductor over-current protection (OCP) Enable [Expressed in Boolean]
 #define    DPC_OCP_VALUE                   19.0  // Inductor over-current protection (OCP) value, to avoid inductor saturation [Expressed in Ampere]
-//// DC Section (2°)
-#define    DPC_VBUS_OVP 	          550.0  // Vbus over-voltage protection (OVP) value [Expressed in Volt]
+//// DCï¿½Sectionï¿½(2ï¿½)
+#define    DPC_VBUS_OVP 	          440.0  // Vbus over-voltage protection (OVP) value [Expressed in Volt]
 #define    DPC_VBUS_UVP_PFC               350.0  // Vbus under-voltage protection (UVP) value in PFC mode [Expressed in Volt]
-#define    DPC_VBUS_UVP_INVERTER          370.0  // Vbus under-voltage protection (UVP) value in INVERTER mode [Expressed in Volt]
+#define    DPC_VBUS_UVP_INVERTER          360.0  // Vbus under-voltage protection (UVP) value in INVERTER mode [Expressed in Volt]
 
 //******************************************************************************
 // CUSTOMIZABLE PARAMETERS END
@@ -121,18 +121,18 @@
 #define     DPC_LINE_FREQ_DEFAULT 50.5    // line frequency default value for first measure init [Expressed in Hertz]//******************************************************************************
 
 
-//// Inrush Current Control (3°)
+//// Inrush Currentï¿½Control (3ï¿½)
 #define    DPC_TIME_ON_RELAY         1188	// Delay time for relay activation [Expressed in milliseconds]
 #define    DPC_DELAY_RELAY              8       // Release time of relay mechanical contacts [Expressed in milliseconds]
 #define    DPC_DELTA_VINPK_VOUT_RELAY  20       // Minimum difference between input (peak) and output voltage to allow the relay turn-on [Expressed in Volts]
-//// Start-up Control (4°)
+//// Start-upï¿½Control (4ï¿½)
 #define    DPC_SOFTSTARTUP_DURATION       1155	// Time duration of PFC soft start-up with load [Expressed in milliseconds]
 #define    DPC_IDC_MAX_LOAD_STARTUP_PERC 14.285 // Max allowed Idc current percentage of max Idc for soft start-up with load [Expressed in %] 
 #define    DPC_IDC_LOAD_CONNECTED_PERC    1.428	// Idc current percentage of max Idc for load mode activation [Expressed in %] 
-//// Fan Control (5°)
+//// Fanï¿½Control (5ï¿½)
 #define    DPC_FAN_ENABLE            true       // Fan control Enable [Expressed in Boolean]
-#define    DPC_ILOAD_FAN_PERC         14.285        // Idc current threshold percentage of max Idc for fan activation [Expressed in %] 
-//// Load Feed-Forward Control (6°)
+#define    DPC_ILOAD_FAN_PERC         30       // Idc current threshold percentage of max Idc for fan activation [Expressed in %] 
+//// Load Feed-Forwardï¿½Control (6ï¿½)
 #define    DPC_FF_SHIFT                 5        // Exponential shift for load feed-forward calculation [Expressed in bits] 
 #define    DPC_FF_TRIPPING              2        // Counter for load feed-forward filtering [Expressed in bits] 
 #define    DPC_FF_UPPER_THRESHOLD      42        // Upper threshold for load feed-forward activation [Expressed in bits] 
@@ -140,7 +140,7 @@
 #define    DPC_FF_UP                   roundf(26.0f * (54.61333333f/(float)DPC_IDC_GAIN) * (230.0f/(float)DPC_VIN_NOM) * ((float)DPC_VBUS_REF_DEFAULT/400.0f) * ((float)DPC_IL_TOT_GAIN/25.44484848f))     // Adjustment factor for load feed-forward step-up in EU range
 #define    DPC_FF_DOWN                 DPC_FF_UP                                                                                                                                                           // Adjustment factor for load feed-forward step-down in EU range [Expressed in bits]  
 
-//// Phase-Shedding Control (7°)
+//// Phase-Sheddingï¿½Control (7ï¿½)
 #define    DPC_IDC_1TO2             (uint16_t)roundf((float)DPC_POUT / (float)DPC_VBUS_REF_DEFAULT * (float)0.31428f * (float)DPC_IDC_GAIN) //300 // Load current threshold for 1ch-to-2ch transition [Expressed in bits]
 #define    DPC_IDC_2TO1             (uint16_t)roundf((float)DPC_IDC_1TO2 * 0.85f) //255	// Load current threshold for 2ch-to-1ch transition [Expressed in bits]
 #define    DPC_IDC_2TO3             (uint16_t)roundf((float)DPC_IDC_1TO2 * 2.0f) //601	// Load current threshold for 2ch-to-3ch transition [Expressed in bits]
@@ -156,7 +156,7 @@
 #define    DPC_VIN_DROPOUT_DETECT            25  // Input voltage threshold for drop-out detect [Expressed in Volts]
 
 
-//// Others (3°)
+//// Othersï¿½(3ï¿½)
 #define    DPC_OTP_EN                      true  // Ambient over-temperature protection (OTP) Enable [Expressed in Boolean]
 #define    DPC_OTSHUTDOWN                    55	 // Ambient over-temperature protection (OTP) value [Expressed in Celsius degrees]
 #define    DPC_DUTY_MAX                    0.99  ///150  // Max duty cycle [Expressed in bits]
@@ -263,30 +263,30 @@
 
 //*** Data processing parameters BEGIN ***//
 //ILtot
-#define    DPC_ILtot_WEIGHT_1         2    // 1° weight for multistage averaging of ILtot [Expressed in bits]
+#define    DPC_ILtot_WEIGHT_1         2    // 1ï¿½ weight for multistage averaging of ILtot [Expressed in bits]
 //IL1
-#define    DPC_IL1_WEIGHT_1          32    // 1° weight for multistage averaging of IL1 [Expressed in bits]
+#define    DPC_IL1_WEIGHT_1          32    // 1ï¿½ weight for multistage averaging of IL1 [Expressed in bits]
 //IL2
-#define    DPC_IL2_WEIGHT_1          32    // 1° weight for multistage averaging of IL2 [Expressed in bits]
+#define    DPC_IL2_WEIGHT_1          32    // 1ï¿½ weight for multistage averaging of IL2 [Expressed in bits]
 //IL3
-#define    DPC_IL3_WEIGHT_1          32    // 1° weight for multistage averaging of IL3 [Expressed in bits]
+#define    DPC_IL3_WEIGHT_1          32    // 1ï¿½ weight for multistage averaging of IL3 [Expressed in bits]
 //Vin
-#define    DPC_VIN_WEIGHT_1           2    // 1° weight for multistage averaging of Vin [Expressed in bits]
-#define    DPC_VIN_WEIGHT_2           8    // 2° weight for multistage averaging of Vin [Expressed in bits]
-#define    DPC_VIN_WEIGHT_3          16    // 3° weight for multistage averaging of Vin [Expressed in bits]
+#define    DPC_VIN_WEIGHT_1           2    // 1ï¿½ weight for multistage averaging of Vin [Expressed in bits]
+#define    DPC_VIN_WEIGHT_2           8    // 2ï¿½ weight for multistage averaging of Vin [Expressed in bits]
+#define    DPC_VIN_WEIGHT_3          16    // 3ï¿½ weight for multistage averaging of Vin [Expressed in bits]
 //Vout
-#define    DPC_VOUT_WEIGHT_1           2    // 1° weight for multistage averaging of Vout [Expressed in bits]
-#define    DPC_VOUT_WEIGHT_2           4    // 2° weight for multistage averaging of Vout [Expressed in bits]
-#define    DPC_VOUT_WEIGHT_3           8    // 3° weight for multistage averaging of Vout [Expressed in bits]
+#define    DPC_VOUT_WEIGHT_1           2    // 1ï¿½ weight for multistage averaging of Vout [Expressed in bits]
+#define    DPC_VOUT_WEIGHT_2           4    // 2ï¿½ weight for multistage averaging of Vout [Expressed in bits]
+#define    DPC_VOUT_WEIGHT_3           8    // 3ï¿½ weight for multistage averaging of Vout [Expressed in bits]
 //Iout
-#define    DPC_IOUT_WEIGHT_1           1    // 1° weight for multistage averaging of Iout [Expressed in bits]
-#define    DPC_IOUT_WEIGHT_2           2    // 2° weight for multistage averaging of Iout [Expressed in bits]
-#define    DPC_IOUT_WEIGHT_3           4    // 3° weight for multistage averaging of Iout [Expressed in bits]
-#define    DPC_IOUT_WEIGHT_4           8    // 4° weight for multistage averaging of Iout [Expressed in bits]
+#define    DPC_IOUT_WEIGHT_1           1    // 1ï¿½ weight for multistage averaging of Iout [Expressed in bits]
+#define    DPC_IOUT_WEIGHT_2           2    // 2ï¿½ weight for multistage averaging of Iout [Expressed in bits]
+#define    DPC_IOUT_WEIGHT_3           4    // 3ï¿½ weight for multistage averaging of Iout [Expressed in bits]
+#define    DPC_IOUT_WEIGHT_4           8    // 4ï¿½ weight for multistage averaging of Iout [Expressed in bits]
 #define    DPC_AVG_SAMPLE              8    // weight for moving average of Iout [Expressed in bits]
 #define    DPC_IZERO_ILOAD          2048//2038//2069///1    // Iload zero-offset compensation [Expressed in bits]
 //Ambient Temperature
-#define    DPC_TEMP_WEIGHT_1          64    // 1° weight for multistage averaging of Ambient Temperature [Expressed in bits]
+#define    DPC_TEMP_WEIGHT_1          64    // 1ï¿½ weight for multistage averaging of Ambient Temperature [Expressed in bits]
 //*** Data processing parameters END ***//
 
 

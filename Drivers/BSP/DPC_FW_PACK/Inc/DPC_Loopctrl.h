@@ -53,12 +53,15 @@ void DPC_LPCNTRL_PhaseShedding(DPC_LPCNTRL_PhaseShedding_t* pPhSh, DPC_CMNDAT_PF
 void DPC_LPCNTRL_PhaseSheddingUpdate(DPC_LPCNTRL_PhaseShedding_t* pPhSh, uint16_t InputVoltage);
 void DPC_LPCNTRL_PhaseSheddingControlInit(DPC_LPCNTRL_PhaseShedding_t* pPhSh);
 void DPC_LPCNTRL_RelayControlInit(DPC_LPCNTRL_Inrush_t* pRelay);
+void DPC_LPCNTRL_MainsSwControlInit(DPC_LPCNTRL_Rly_t* pRelay);
+void DPC_LPCNTRL_RelayControlUpdate(DPC_LPCNTRL_Inrush_t* pRelay, DPC_CMNDAT_PFC_ControlData_t* pCtrlData, DPC_LPCNTRL_VoltageControl_t* pVoltCtrl, DPC_LPCNTRL_ConverterControl_t* pConvCtrl);
+void DPC_LPCNTRL_MainsSwControlUpdate(DPC_LPCNTRL_Rly_t* pRelay, DPC_CMNDAT_PFC_ControlData_t* pCtrlData, DPC_LPCNTRL_VoltageControl_t* pVoltCtrl, DPC_LPCNTRL_ConverterControl_t* pConvCtrl);
 void DPC_LPCNTRL_ProtectionControlInit(DPC_LPCNTRL_Protection_t* pProt);
 void DPC_LPCNTRL_ProtectionControlCalibration(DPC_LPCNTRL_Protection_t* pProt, DPC_CMNDAT_PFC_ControlData_t* pCtrlData);
 void DPC_LPCNTRL_ConverterControlInit(DPC_LPCNTRL_ConverterControl_t* pConvCtrl); 
 void DPC_LPCNTRL_FanControlInit(DPC_LPCNTRL_Fan_t* pFan);
 void DPC_LPCNTRL_VoltageControlInit(DPC_LPCNTRL_VoltageControl_t* pVoltCtrl);
-void DPC_LPCNTRL_ConverterStatusUpdate(DPC_LPCNTRL_Led_t* pLed, DPC_LPCNTRL_Inrush_t* pRelay, DPC_LPCNTRL_Fan_t* pFan); 
+void DPC_LPCNTRL_ConverterStatusUpdate(DPC_LPCNTRL_Led_t* pLed, DPC_LPCNTRL_Inrush_t* pRelay,DPC_LPCNTRL_Rly_t* pMainsSw, DPC_LPCNTRL_Fan_t* pFan);
 void DPC_LPCNTRL_BusVoltageUpdate(DPC_CMNDAT_PFC_ControlData_t* pCtrlData,  DPC_MTH_RampGenerator_t* pRamp, DPC_LPCNTRL_VoltageControl_t* pVoltCtrl, DPC_LPCNTRL_ConverterControl_t* pConvCtrl);
 void DPC_LPCNTRL_ACpeakCurrentUpdate(DPC_AVGCC_Avg3Channels_t* pAvg, DPC_CMNDAT_PFC_ControlData_t* pCtrlData, DPC_LPCNTRL_ConverterControl_t* pConvCtrl);
 void DPC_LPCNTRL_ACphaseCurrentUpdate(DPC_CMNDAT_PFC_ControlData_t* pCtrlData);
