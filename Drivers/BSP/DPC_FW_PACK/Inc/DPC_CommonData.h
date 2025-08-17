@@ -204,8 +204,7 @@ typedef struct{ // this allows for condtional stotage of conversion state which 
   GPIO_PinState Relay;
   FunctionalState RelayControl;
 
-   DPC_LPCNTRL_ConversionMode_t PastConversionMode;
-   DPC_LPCNTRL_ConversionMode_t PresentConversionMode;
+   FlagStatus ConversionChange;
    
  }DPC_LPCNTRL_Rly_t;
 

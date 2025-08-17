@@ -75,6 +75,7 @@
 
 //*** LOCAL FUNCTIONS PROTOTYPES BEGIN ***//
 DPC_FAULTERROR_LIST_TypeDef DPC_ProtectionDetect(void);
+DPC_LPCNTRL_ConversionMode_t DPC_ModeCheck(void);
 //*** LOCAL FUNCTIONS PROTOTYPES END***//
 
 //*** STRUCT DEFINITION BEGIN ***//
@@ -155,7 +156,8 @@ void DPC_APPLICATION_Init(void)
    
    //*** Relay control init ***//
    DPC_LPCNTRL_RelayControlInit(&PFC_Relay);
-   
+   DPC_LPCNTRL_MainsSwControlInit(&Mains_SW_Relay);
+
    //*** Voltage control init ***//
    DPC_LPCNTRL_VoltageControlInit(&PFC_VoltageControl);
    
@@ -302,6 +304,8 @@ HAL_FLASH_Lock();
    
    //*** ADCs start with DMA***//
    HAL_ADC_Start_DMA(&ADC_SET1_ID,(uint32_t*)&Data_Set1,ADC_SET1_LENGTH);
+
+   //TODO need to set up ACD_SET3
    /*** Peripheral start/config END ***/
    
 //   HAL_UART_Receive_IT(&huart4,rx_buff,3);
@@ -531,7 +535,7 @@ DPC_FAULTERROR_LIST_TypeDef ProtectionDetect_status = NO_FAULT;
         Current_Control.ZvdFilter = ENABLE;
         PFC_Control.Flag = SET;
         PFC_Control.ubS = SOFT_STARTUP;
-        DPC_FSM_State_Set(DPC_FSM_START);
+        DPC_FSM_State_Set(DPC_FSM_START);  
         }//else if (PFC_Control.ConversionMode == DPC_NONE_MODE)
     }
  }// else 
@@ -550,8 +554,10 @@ bool DPC_FSM_START_Func(void)
 bool RetVal = true; 
 
 DPC_FAULTERROR_LIST_TypeDef ProtectionDetect_status = NO_FAULT;
+  DPC_LPCNTRL_ConverterControl_t current_mode;
   
   ProtectionDetect_status = DPC_ProtectionDetect();
+  
   
   if (ProtectionDetect_status){
      PFC_Control.Flag = SET;
@@ -783,7 +789,7 @@ DPC_FAULTERROR_LIST_TypeDef ProtectionDetect_status = NO_FAULT;
           LF_LS_OFF;
           LF_HS_OFF;
           PFC_VoltageControl.wIpk = 0;
-          DPC_TO_Set(DPC_TO_DROP_OUT, DPC_TO_DROP_OUT_TICK);
+          DPC_TO_Set(DPC_TO_DROP_OUT, DPC_TO_DROP_OUT_TICK); // we need to drop into inverter mode here
           PFC_Control.Flag = RESET;
           break;
         }
@@ -896,7 +902,7 @@ bool RetVal = true;
       (ProtectionDetect_status == FAULT_AOT) ||
       (ProtectionDetect_status == FAULT_ACF_OR) ||
       (ProtectionDetect_status == FAULT_CURR_CALIB)||
-      (ProtectionDetect_status == FAULT_NONE_MODE))  { //permanent fault
+      (ProtectionDetect_status == FAULT_NONE_MODE))  { //permanent fault need to look at AOT as a fault
         if (PFC_Control.Flag){          
           DPC_LPCNTRL_DrivingOutputStop();
           Current_Control.BoostSwitchCh1 = RESET;
@@ -933,6 +939,10 @@ bool RetVal = true;
         DPC_FSM_State_Set(DPC_FSM_FAULT);
   }
   else{ //recovery from error
+      if  (ProtectionDetect_status==ERROR_AC_PRESWITCH )
+          {PFC_Control.ConversionMode = DPC_INVERTER_MODE;
+            MAINS_SW_OFF;
+          }
     
       if (PFC_Control.Flag){
           DPC_LPCNTRL_DrivingOutputStop();
@@ -1516,7 +1526,7 @@ void HAL_COMP_TriggerCallback(COMP_HandleTypeDef *hcomp)
   * @retval Voltage status
   */
 DPC_FAULTERROR_LIST_TypeDef DPC_ProtectionDetect(void)
-{
+{ 
 DPC_FAULTERROR_LIST_TypeDef RetVal = NO_FAULT;
 
   if (PFC_Protection.OverCurrentTrigger){ //Inductor Over Current Protection
@@ -1548,23 +1558,34 @@ DPC_FAULTERROR_LIST_TypeDef RetVal = NO_FAULT;
       || ((PFC_Control.ConversionMode == DPC_INVERTER_MODE) && (Control_Data.uhAvgVout < Control_Data.uhVbusUnderVoltageValueInverter)) )
     { //Vbus DC UnderVoltage Protection
           RetVal |= ERROR_DC_UV;
-       PFC_Protection.ubErrorCode =2;
+       PFC_Protection.ubErrorCode =2; // this is where we look and crash the Inverter.. wait for the voltage to recover 
+      
        
     }
   }
   
+  if((PFC_Control.ConversionMode=DPC_INVERTER_MODE)&& (Control_Data.uhVinPreSwitchRms > Control_Data.uhVinRmsMin))
+  {
+    
+    RetVal|=ERROR_AC_PRESWITCH;
+    PFC_Protection.ubErrorCode =12;
+    //todo next state is start this is time to change modes and make hte pfc run
+
+  }
+  
+  
   if ((Control_Data.uhVinRmsVolt > Control_Data.uhVinRmsMax) || (Control_Data.uhVinPreSwitchRms > Control_Data.uhVinRmsMax)){ //Vac OverVoltage Protection
      RetVal |= ERROR_AC_OV;
      PFC_Protection.ubErrorCode =3;
-     // right here is where we pull the relay
-     MAINS_SW_ON ;
+     
+     
     
 
     }
   else{   
       if(PFC_Protection.ubInputLowVoltageTimerCount >= DPC_VIN_LOW_VOLTAGE_PROT_COUNT){ //Vac UnderVoltage Protection
         RetVal |= ERROR_AC_UV;
-        PFC_Protection.ubErrorCode =4;
+        PFC_Protection.ubErrorCode =4;//todo this is a problem on both sides.
       }
   }
   

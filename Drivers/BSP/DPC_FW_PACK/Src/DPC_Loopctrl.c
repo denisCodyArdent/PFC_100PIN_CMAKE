@@ -293,8 +293,7 @@ void DPC_LPCNTRL_RelayControlInit(DPC_LPCNTRL_Inrush_t* pRelay){
 }
 void DPC_LPCNTRL_MainsSwControlInit(DPC_LPCNTRL_Rly_t* pRelay){
   pRelay->RelayControl = DISABLE;
-  pRelay->PastConversionMode = DPC_INVERTER_MODE;
-  pRelay->PresentConversionMode = DPC_PFC_MODE;
+  pRelay->ConversionChange = RESET;
   }
 /**
 * @brief  DPC_LPCNTRL_ProtectionControlInit: Protections control init function.
