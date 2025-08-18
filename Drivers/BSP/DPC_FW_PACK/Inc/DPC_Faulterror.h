@@ -66,7 +66,7 @@ typedef enum
   FAULT_INR             = 0x00000020,           //INRUSH
   FAULT_BRS             = 0x00000040,           //BURST
   FAULT_PLL_OR          = 0x00000080,           //PLL Out of Range  
-  FAULT_PFC_UVLO        = 0x00000100,           //FAULT Under-Voltage-AC
+  FAULT_PFC_UVLO        = 0x00000100,           //FAULT Under-Voltage-AC. Always an error in our book.
   FAULT_IDLE            = 0x00000200,           //FAULT_IDLE
   FAULT_GEN             = 0x00000400,           //TBD
   FAULT_AOT             = 0x00000800,           //FAULT Ambient Over Temperature
@@ -79,12 +79,12 @@ typedef enum
   ERROR_START_INRS      = 0x00040000,           //ERROR START-UP INRUSH
   ERROR_FSM             = 0x00080000,           //ERROR in Finite State Machine
   ERROR_PFC_UVLO        = 0x00100000,           //ERROR AC UnderVoltage during PFC mode
-  ERROR_BRS             = 0x00200000,           //TBD
-  ERROR_AC_UV           = 0x00400000,           //ERROR Under-Voltage-AC
+  ERROR_BRS             = 0x00200000,           // 
+  ERROR_AC_UV           = 0x00400000,           //ERROR Under-Voltage-AC 
   ERROR_PLL_OR          = 0x00800000,           //ERROR PLL Out of Range
   ERROR_PFC_RUN         = 0x01000000,           //ERROR_PFC_RUN
   ERROR_AC_UVLO         = 0x02000000,           //ERROR Under-Voltage-Lockout AC
-  ERROR_AC_OFF          = 0x04000000,           //ERROR No AC 
+  ERROR_AC_OFF          = 0x04000000,           //ERROR No AC . Use this to wait for a master on 
   ERROR_PFC             = 0x08000000,           //ERROR during PFC mode
   ERROR_PFC_ERRSeq      = 0x10000000,           //ERROR 3Phase sequence connection
   ERROR_DC_UV           = 0x20000000,           //ERROR Under-Voltage-DC  

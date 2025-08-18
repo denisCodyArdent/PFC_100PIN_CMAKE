@@ -44,7 +44,7 @@
 
 ///__Start_________________________________________________________________STEVAL_BIDIRCB_PFC_______________________________________________________________________
 
-//Main State machines section begin
+//Main State machines section begin this is after start
 #define   CONVERTER_INRUSH  1
 #define   FREQUENCY_DETECT  2
 #define   ILOAD_CHECK       3

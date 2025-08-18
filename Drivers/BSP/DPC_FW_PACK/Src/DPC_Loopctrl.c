@@ -190,7 +190,7 @@ if((pConvCtrl->ConversionMode == DPC_PFC_MODE)||(pConvCtrl->ConversionMode == DP
             } 
    }//if((pConvCtrl->ConversionMode == DPC_PFC_MODE)||(pConvCtrl->ConversionMode == DPC_NONE_MODE))
 
-else if(pConvCtrl->ConversionMode == DPC_INVERTER_MODE){
+else if(pConvCtrl->ConversionMode == DPC_INVERTER_MODE){ //TODO jam this to one phase
   
             if (pPhSh->ubNumOfActiveChannels == 3){
               if (pVoltCtrl->wIpk < (int32_t)pPhSh->uhCurrentTh3to2_ac){ 

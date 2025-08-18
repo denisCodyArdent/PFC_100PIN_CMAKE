@@ -75,7 +75,7 @@
 
 //*** LOCAL FUNCTIONS PROTOTYPES BEGIN ***//
 DPC_FAULTERROR_LIST_TypeDef DPC_ProtectionDetect(void);
-DPC_LPCNTRL_ConversionMode_t DPC_ModeCheck(void);
+
 //*** LOCAL FUNCTIONS PROTOTYPES END***//
 
 //*** STRUCT DEFINITION BEGIN ***//
@@ -309,6 +309,7 @@ HAL_FLASH_Lock();
    /*** Peripheral start/config END ***/
    
 //   HAL_UART_Receive_IT(&huart4,rx_buff,3);
+  PFC_Control.ConversionMode=DPC_PFC_MODE;
   
   /* PACK CODE END 2 */
   
@@ -430,7 +431,7 @@ bool RetVal = true;
     
  
     //*** INPUT VOLTAGE CHECK BEGIN ***// 
-    if ((Control_Data.uhVinRmsVolt >= Control_Data.uhVinRmsMin) && (Control_Data.uhVinRmsVolt <= Control_Data.uhVinRmsMax)){
+    if ((Control_Data.uhVinRmsVolt >= Control_Data.uhVinRmsMin) && (Control_Data.uhVinRmsVolt <= Control_Data.uhVinRmsMax )){
       DPC_AVGCC_InputVoltageFeedForwardInit(&Input_FF, Control_Data.uhVinRmsVolt, DPC_VIN_NOM, DPC_VIN_MIN, DPC_VIN_MAX);
       PFC_VoltageControl.uhVinKff = Input_FF.uhKff;           
       if(DCP_AVGCC_FeedForwardInit(&Load_FF, (uint8_t) DPC_FF_SHIFT, (uint8_t) DPC_FF_TRIPPING,
@@ -439,9 +440,13 @@ bool RetVal = true;
         //error managment   
       }
     }
-    
+    else if(PFC_Control.ConversionMode==DPC_INVERTER_MODE) // need additonal check of battery voltage
+    {PFC_Control.Flag = SET;           
+    PFC_Control.ubS = ILOAD_CHECK;
+    PFC_Control.ConversionStart = DPC_MANUAL_START;
+    DPC_FSM_State_Set(DPC_FSM_INIT); }
 
-    if ((Control_Data.uhVinRmsVolt >= Control_Data.uhVinRmsMin) && (Control_Data.uhVinRmsVolt <= Control_Data.uhVinRmsMax) &&
+    if ((Control_Data.uhVinRmsVolt >= Control_Data.uhVinRmsMin) && (Control_Data.uhVinPreSwitchRms <= Control_Data.uhVinRmsMax) &&
         (Current_Control.ubLineFrequencyMeasure >= DPC_LINE_FREQ_MIN) && (Current_Control.ubLineFrequencyMeasure <= DPC_LINE_FREQ_MAX) &&
          Control_Data.uhVinRmsVolt!=0){
     PFC_Control.Flag = SET;           
@@ -473,6 +478,7 @@ bool DPC_FSM_INIT_Func(void)
 bool RetVal = true; 
 
 
+MAINS_SW_ON;
 DPC_FAULTERROR_LIST_TypeDef ProtectionDetect_status = NO_FAULT;
   
   ProtectionDetect_status = DPC_ProtectionDetect();
@@ -638,13 +644,13 @@ DPC_FAULTERROR_LIST_TypeDef ProtectionDetect_status = NO_FAULT;
           PFC_Control.Flag = RESET;
         }
 
-////        // DROP-OUTPUT DETECT CONDITION 
-////        if (Data_Avg_Vin_PFC.stage_1.uhAvgVal <= Control_Data.uhVinDropoutThresholdDetect){          
-////          PFC_Control.Flag = SET;
-////          PFC_Control.ubS = DROP_OUT;
-////          PFC_Control.ubRunState = DROP_OUT;
-////          break;
-////        }
+// DROP-OUTPUT DETECT CONDITION 
+//      if (Data_Avg_Vin_PFC.stage_1.uhAvgVal <= Control_Data.uhVinDropoutThresholdDetect){          
+//          PFC_Control.Flag = SET;
+//          PFC_Control.ubS = DROP_OUT;
+//        PFC_Control.ubRunState = DROP_OUT;
+//        break;
+ //           }
 
 
 
@@ -939,10 +945,11 @@ bool RetVal = true;
         DPC_FSM_State_Set(DPC_FSM_FAULT);
   }
   else{ //recovery from error
-      if  (ProtectionDetect_status==ERROR_AC_PRESWITCH )
+      if  (ProtectionDetect_status==ERROR_DC_UV  ) // can only fire in PFC mode
           {PFC_Control.ConversionMode = DPC_INVERTER_MODE;
             MAINS_SW_OFF;
           }
+          
     
       if (PFC_Control.Flag){
           DPC_LPCNTRL_DrivingOutputStop();
@@ -1520,7 +1527,7 @@ void HAL_COMP_TriggerCallback(COMP_HandleTypeDef *hcomp)
 
 
 
-/**
+/**making this work easier for a charger pfc bd isystem so we blank on certain modes.
   * @brief  Application Protection Detect in RUN status
   * @param  None
   * @retval Voltage status
@@ -1564,18 +1571,19 @@ DPC_FAULTERROR_LIST_TypeDef RetVal = NO_FAULT;
     }
   }
   
-  if((PFC_Control.ConversionMode=DPC_INVERTER_MODE)&& (Control_Data.uhVinPreSwitchRms > Control_Data.uhVinRmsMin))
+  if((PFC_Control.ConversionMode=DPC_INVERTER_MODE) && (Control_Data.uhVinPreSwitchRms > Control_Data.uhVinRmsMin))
   {
     
-    RetVal|=ERROR_AC_PRESWITCH;
+    RetVal|=ERROR_PFC_RUN;
     PFC_Protection.ubErrorCode =12;
     //todo next state is start this is time to change modes and make hte pfc run
 
   }
   
   
-  if ((Control_Data.uhVinRmsVolt > Control_Data.uhVinRmsMax) || (Control_Data.uhVinPreSwitchRms > Control_Data.uhVinRmsMax)){ //Vac OverVoltage Protection
+  if ( (Control_Data.uhVinPreSwitchRms > Control_Data.uhVinRmsMax)){ //Vac OverVoltage Protection
      RetVal |= ERROR_AC_OV;
+     MAINS_SW_OFF; // this is urgent get the mains switch off
      PFC_Protection.ubErrorCode =3;
      
      
