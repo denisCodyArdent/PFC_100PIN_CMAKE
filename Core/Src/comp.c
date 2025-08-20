@@ -21,7 +21,7 @@
 #include "comp.h"
 
 /* USER CODE BEGIN 0 */
-
+extern single_phase;
 /* USER CODE END 0 */
 
 COMP_HandleTypeDef hcomp1;

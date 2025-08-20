@@ -254,6 +254,7 @@ void DPC_LPCNTRL_PhaseSheddingControlInit(DPC_LPCNTRL_PhaseShedding_t* pPhSh){
    
    pPhSh->ubNumOfActiveChannels = DPC_NCH;
    //dc side current thresholds init
+   
    pPhSh->uhCurrentTh1to2_dc_Init = DPC_IDC_1TO2;	
    pPhSh->uhCurrentTh2to1_dc_Init = DPC_IDC_2TO1;	
    pPhSh->uhCurrentTh2to3_dc_Init = DPC_IDC_2TO3;	

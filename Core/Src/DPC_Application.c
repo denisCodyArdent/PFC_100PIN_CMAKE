@@ -111,7 +111,7 @@ DPC_LPCNTRL_ConverterControl_t PFC_Control;
 
 uint8_t rx_buff[3];
 uint16_t Vbus_ref_rx=0;
-
+bool single_phase = DPC_PHASE_INVERTER_SINGLE;
 
 //*** STRUCT DEFINITION END ***//
 
@@ -130,12 +130,20 @@ void DPC_APPLICATION_Init(void)
    /*** struct init BEGIN ***/
 
    //*** Data process init ***//
-   //IL1
+   if(single_phase)
+   {Data_Avg_IL1_avg_PFC.uhWeight =3.0*DPC_IL1_WEIGHT_1;
+   Data_Avg_IL2_avg_PFC.uhWeight = 0;
+   //IL3
+   Data_Avg_IL3_avg_PFC.uhWeight =0;
+     
+   }
+   
+   else{
    Data_Avg_IL1_avg_PFC.uhWeight = DPC_IL1_WEIGHT_1;
-   //IL2
    Data_Avg_IL2_avg_PFC.uhWeight = DPC_IL2_WEIGHT_1;
    //IL3
    Data_Avg_IL3_avg_PFC.uhWeight = DPC_IL3_WEIGHT_1;
+  }
    //Vout  
    Data_Avg_Vout_PFC.stage_1.uhWeight = DPC_VOUT_WEIGHT_1;
    Data_Avg_Vout_PFC.stage_2.uhWeight = DPC_VOUT_WEIGHT_2;
@@ -444,6 +452,7 @@ bool RetVal = true;
     {PFC_Control.Flag = SET;           
     PFC_Control.ubS = ILOAD_CHECK;
     PFC_Control.ConversionStart = DPC_MANUAL_START;
+    MAINS_SW_OFF;
     DPC_FSM_State_Set(DPC_FSM_INIT); }
 
     if ((Control_Data.uhVinRmsVolt >= Control_Data.uhVinRmsMin) && (Control_Data.uhVinPreSwitchRms <= Control_Data.uhVinRmsMax) &&
@@ -512,7 +521,7 @@ DPC_FAULTERROR_LIST_TypeDef ProtectionDetect_status = NO_FAULT;
    //*** Protection control calibration END ***// 
 
     if (PFC_Control.ConversionStart){
-      if (PFC_Control.ConversionMode == DPC_PFC_MODE){
+      if (PFC_Control.ConversionMode == DPC_PFC_MODE){ MAINS_SW_ON;
                         //*** No-Load Start-up
                         if (Data_Avg_Iout_PFC.stage_3.uhAvgVal < Control_Data.uhIdcLoadConnected){
                             Current_Control.ZvdFilter = ENABLE;
@@ -560,7 +569,7 @@ bool DPC_FSM_START_Func(void)
 bool RetVal = true; 
 
 DPC_FAULTERROR_LIST_TypeDef ProtectionDetect_status = NO_FAULT;
-  DPC_LPCNTRL_ConverterControl_t current_mode;
+//  DPC_LPCNTRL_ConverterControl_t current_mode;
   
   ProtectionDetect_status = DPC_ProtectionDetect();
   
@@ -1071,8 +1080,11 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
    
   
 //  *** Phase shedding control BEGIN ***//______________________________________
+if(! single_phase)// this doesn't happen in single phase 
+{
   DPC_LPCNTRL_PhaseSheddingUpdate(&PFC_PhaseShedding, Control_Data.uhVinRmsVolt);
   DPC_LPCNTRL_PhaseShedding(&PFC_PhaseShedding, &Control_Data, &PFC_VoltageControl, &PFC_Control);
+}
 //  *** Phase shedding control END ***//________________________________________
  
 
@@ -1390,7 +1402,7 @@ void HAL_COMP_TriggerCallback(COMP_HandleTypeDef *hcomp)
   PFC_Protection.uwCh3Out1State = HAL_HRTIM_WaveformGetOutputState(&hhrtim1, HAL_SLAVE2_TIMER_INDEX, SLAVE2_OUTPUT_LS);
   PFC_Protection.uwCh3Out2State = HAL_HRTIM_WaveformGetOutputState(&hhrtim1, HAL_SLAVE2_TIMER_INDEX, SLAVE2_OUTPUT_HS);  
   
-  
+  ////TODO need ot go back and disable the faults from all but comp1 comp2 and LS/HS
   
   if (hcomp->Instance == COMP1){
     

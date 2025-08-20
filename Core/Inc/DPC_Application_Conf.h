@@ -119,7 +119,7 @@
 #define     DPC_LINE_FREQ_MAX       64    // Maximum input line frequency [Expressed in Hertz]
 #define     DPC_LINE_FREQ_COUNTER 1000    // line frequency counter value at 50Hz [Expressed in bits]
 #define     DPC_LINE_FREQ_DEFAULT 50.5    // line frequency default value for first measure init [Expressed in Hertz]//******************************************************************************
-
+#define DPC_PHASE_INVERTER_SINGLE         true       // Inverter single-phase mode Enable [Expressed in Boolean] This is number of synced stages 
 
 //// Inrush Current�Control (3�)
 #define    DPC_TIME_ON_RELAY         1188	// Delay time for relay activation [Expressed in milliseconds]
@@ -254,7 +254,8 @@
 #define    DPC_LUT_PERIOD_POINTS     800   // Number of LUT points for one AC grid line-cycle
 #define    DPC_LUT_PERIOD_TIM_CNT   1000   // Default LUT Timer counter at 50Hz with DPC_NUM_LUT_POINTS = 200.
 #define    PI                  3.1415926   // Pi Greek
-#define    DPC_NCH                     3
+ // Number of converter channels [Expressed in bits]
+#define    DPC_NCH                     1    // this must be 3 for non single phase
 #define    DPC_ISENSE_DELAY       350E-9
 #define    DPC_NUM_OF_VIN_SET          6
 #define    DPC_SQRT_2          1.4142135
