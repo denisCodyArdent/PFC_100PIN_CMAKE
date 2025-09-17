@@ -1080,7 +1080,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
    
   
 //  *** Phase shedding control BEGIN ***//______________________________________
-if(! single_phase)// this doesn't happen in single phase 
+if(! single_phase)// this turns phase shedding off
 {
   DPC_LPCNTRL_PhaseSheddingUpdate(&PFC_PhaseShedding, Control_Data.uhVinRmsVolt);
   DPC_LPCNTRL_PhaseShedding(&PFC_PhaseShedding, &Control_Data, &PFC_VoltageControl, &PFC_Control);
