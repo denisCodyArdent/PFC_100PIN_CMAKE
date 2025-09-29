@@ -60,3 +60,5 @@
 1595	2124	7772176445877327	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj	1f78bb3585bd5ec7
 1568	2178	7772176446417358	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.obj	d23e1246d603f385
 486	980	7774165755818244	100_pin_cmake.elf	dffad46711a7dbb2
+5	517	7808878251647072	CMakeFiles/100_pin_cmake.dir/Core/Src/DPC_Application.c.obj	422fe70864fab199
+518	1488	7808878261255288	100_pin_cmake.elf	dffad46711a7dbb2

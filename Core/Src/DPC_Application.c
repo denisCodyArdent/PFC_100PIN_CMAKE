@@ -111,7 +111,7 @@ DPC_LPCNTRL_ConverterControl_t PFC_Control;
 
 uint8_t rx_buff[3];
 uint16_t Vbus_ref_rx=0;
-bool single_phase = DPC_PHASE_INVERTER_SINGLE;
+bool single_phase = DPC_PHASE_INVERTER_SINGLE; // this gives us one phase only
 
 //*** STRUCT DEFINITION END ***//
 
