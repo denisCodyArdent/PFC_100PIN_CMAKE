@@ -120,9 +120,17 @@
 #define  VIN_L1_RANK_ID        6        //1st Data set Rank 7 data label 
 #define  VIN_L2_RANK_ID        7        //1st Data set Rank 8 data label 
 #define  I_IN_FLT_RANK_ID      8        //1st Data set Rank 9 data label
+
+#define  ADC_SET2_ID       hadc4 
+
+#define  ADC_SET2_LENGTH       2
+#define  VINACL_RANK_ID        0
+#define  VINACN_RANK_ID        1
+
+
 //*** ADC Section END ***//--------------------------------------------
 
-
+ 
 
 
 

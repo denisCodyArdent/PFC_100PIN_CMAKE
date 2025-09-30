@@ -647,17 +647,13 @@ typedef struct{
 }DPC_CMNDAT_DataSet1_t;
 
 
-typedef struct{
-  //***ADC3
-  uint16_t uhBufferADC3[2];
-  
-}DPC_CMNDAT_DataSet2_t;
+
 
 typedef struct{
   //***ADC4
   uint16_t uhBufferADC4[2];
 
-}DPC_CMNDAT_DataSet3_t;
+}DPC_CMNDAT_DataSet2_t;
 
 typedef struct{
   //***ADC2
@@ -676,6 +672,8 @@ typedef struct{
   uint16_t uhVin; //line-neutral
 
   //*** ADC4
+   uint16_t uhVinPreSwitchACL;
+   uint16_t uhVinPreSwitchACN;
    uint16_t uhVinPreSwitch;
   
   //*** FOR DEBUG BEGIN***//
@@ -690,7 +688,9 @@ typedef struct{
   //***ADC3
   uint16_t uhIinDebug;
   uint16_t uhIinFltDebug;
-  
+  uint16_t uhVinPreSwitchACLDebug;
+   uint16_t uhVinPreSwitchACNDebug;
+
   uint16_t uhVinDebug; //line-neutral
   //***ADC3
   uint16_t uhVinPreSwitchDebug;
@@ -730,7 +730,9 @@ typedef struct{
   uint16_t uhVinRmsMin; // Minimum RMS input voltage in [V]
   uint16_t uhVinRmsMax; // Maximum RMS input voltage in [V]
   uint16_t uhVinRmsDer; // Derating RMS input voltage in [V]
-  uint16_t uhVinPreSwitchRms;//RMS prre switch for inverter and also pfc 
+ 
+   uint16_t uhVinPreSwitchRms;//RMS pre switch for inverter and also pfc 
+  uint16_t uhVinPreSwitchRmsVolt;//RMS pre switch for inverter and also pfc in volt
   uint16_t uhVinRmsFactor; // Conversion to Rms factor
   
   uint16_t uhVinDropoutThresholdDetect; // Input voltage threshold for Drop-Out detect
@@ -771,7 +773,7 @@ typedef struct{
 }DPC_CMNDAT_PFC_ControlData_t;
 
 
-void DPC_CMNDAT_GetDataAllSet(uint16_t* pDataSet1, uint16_t* pDataSet2,uint16_t* pDataSet3,  DPC_CMNDAT_PFC_RawData_t* pDataAllSet, FunctionalState GetDataMode); 
+void DPC_CMNDAT_GetDataAllSet(uint16_t* pDataSet1, uint16_t* pDataSet2, DPC_CMNDAT_PFC_RawData_t* pDataAllSet, FunctionalState GetDataMode); 
 
 //*** COMMON DATA of 3CH INTERLEAVED STEVAL-BIDIRCB-PFC END ------------- ***/
 

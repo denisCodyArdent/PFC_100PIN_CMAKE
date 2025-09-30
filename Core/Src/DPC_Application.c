@@ -80,8 +80,8 @@ DPC_FAULTERROR_LIST_TypeDef DPC_ProtectionDetect(void);
 
 //*** STRUCT DEFINITION BEGIN ***//
 DPC_CMNDAT_DataSet1_t Data_Set1; 
-DPC_CMNDAT_DataSet2_t Data_Set2; 
-DPC_CMNDAT_DataSet3_t Data_Set3;// need to add pre switch voltages so we can determine when to switch back
+ 
+DPC_CMNDAT_DataSet2_t Data_Set2;// need to add pre switch voltages so we can determine when to switch back
 DPC_CMNDAT_PFC_RawData_t Data_adc; //***raw variable creation from data struct in DPC_CommonData.h
 DPC_CMNDAT_PFC_ControlData_t Control_Data; //***control variable creation from data struct in DPC_CommonData.h
 DPC_MTH_Average_t Data_Avg_IL1_avg_PFC; //***variable creation from data struct in DPC_Math.h
@@ -90,6 +90,7 @@ DPC_MTH_Average_t Data_Avg_IL3_avg_PFC; //***variable creation from data struct 
 DPC_MTH_Average_t Data_Avg_Temp_PFC; //***variable creation from data struct in DPC_Math.h
 DPC_MTH_Average3Stages_t Data_Avg_Vout_PFC; //***variable creation from data struct in DPC_Math.h
 DPC_MTH_Average3Stages_t Data_Avg_Vin_PFC; //***variable creation from data struct in DPC_Math.h
+DPC_MTH_Average3Stages_t Data_Avg_VinPreSwitch_PFC; //***variable creation from data struct in DPC_Math.h
 DPC_MTH_Average4Stages_t Data_Avg_Iout_PFC; //***variable creation from data struct in DPC_Math.h
 DPC_MTH_MovingAverage_t Data_MovAvg_Iout_PFC; //***variable creation from data struct in DPC_Math.h
 DPC_MTH_RampGenerator_t Vout_PFC_Ramp;
@@ -111,7 +112,7 @@ DPC_LPCNTRL_ConverterControl_t PFC_Control;
 
 uint8_t rx_buff[3];
 uint16_t Vbus_ref_rx=0;
-bool single_phase = DPC_PHASE_INVERTER_SINGLE; // this gives us one phase only makee sure it doesn't get wipped out
+bool single_phase = (bool)(DPC_PHASE_INVERTER_SINGLE); // this gives us one phase only makee sure it doesn't get wipped out
 
 //*** STRUCT DEFINITION END ***//
 
@@ -309,15 +310,18 @@ HAL_FLASH_Lock();
    //*** ADCs calibration***//
    HAL_ADCEx_Calibration_Start(&ADC_SET1_ID, ADC_SINGLE_ENDED);
 //   HAL_ADCEx_Calibration_Start(&ADC_SET2_ID, ADC_SINGLE_ENDED);
-   
+   HAL_ADCEx_Calibration_Start(&ADC_SET2_ID , ADC_SINGLE_ENDED);
+
    //*** ADCs start with DMA***//
    HAL_ADC_Start_DMA(&ADC_SET1_ID,(uint32_t*)&Data_Set1,ADC_SET1_LENGTH);
+   HAL_ADC_Start_DMA(&ADC_SET2_ID,(uint32_t*)&Data_Set2,ADC_SET2_LENGTH);
 
-   //TODO need to set up ACD_SET3
+   
    /*** Peripheral start/config END ***/
    
 //   HAL_UART_Receive_IT(&huart4,rx_buff,3);
   PFC_Control.ConversionMode=DPC_PFC_MODE;
+  // this is safe and then will allow a check of faults
   
   /* PACK CODE END 2 */
   
@@ -1010,12 +1014,13 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
    TimeoutMng();
    
    //*** ADC data acquisition BEGIN***//________________________________________
-   DPC_CMNDAT_GetDataAllSet((uint16_t*)&Data_Set1, (uint16_t*)&Data_Set2, (uint16_t*)&Data_Set3, &Data_adc, DPC_ADC_MODE);      
+   DPC_CMNDAT_GetDataAllSet((uint16_t*)&Data_Set1, (uint16_t*)&Data_Set2,  &Data_adc, DPC_ADC_MODE);      
    //*** ADC data acquisition END***//__________________________________________
  //TODO look at the input voltage prior switch
    
   //*** Vinp differential measurement START ***//_______________________________
   Data_adc.uhVin = (uint16_t)fabsf((float)(Data_adc.uhVinL1 - Data_adc.uhVinL2));
+  Data_adc.uhVinPreSwitch=(uint16_t)fabsf((float)(Data_adc.uhVinPreSwitchACL - Data_adc.uhVinPreSwitchACN));
   //*** Vinp differential measurement END ***//_________________________________
   
   //*** Iload zero-offset compensation BEGIN ***//______________________________     
@@ -1025,7 +1030,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 //  else{
 //    Data_adc.uhIout = Data_adc.uhIout - DPC_IZERO_ILOAD;
 //  }
-
+// note that on this board the current is inverterted
   
 //  if (Data_adc.uhIout < (uint16_t)((int32_t)Current_Control.uwIzeroOffsetIdc + Current_Control.wDeltazeroOffsetIdc)) {
 //    Data_adc.uhIout = 0;
@@ -1053,6 +1058,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   Control_Data.uhAvgIout = DCP_MTH_Average4Stages(Data_adc.uhIout, &Data_Avg_Iout_PFC);  
   Control_Data.uhAvgTemp = DCP_MTH_Average(Data_adc.uhTemp, &Data_Avg_Temp_PFC);  
   Control_Data.uhVinRms = DCP_MTH_Average3Stages(Data_adc.uhVin, &Data_Avg_Vin_PFC);
+  Control_Data.uhVinPreSwitchRms = DCP_MTH_Average3Stages(Data_adc.uhVinPreSwitch, &Data_Avg_VinPreSwitch_PFC);
   Control_Data.uhMovAvgIout = DCP_MTH_MovingAverage(Data_adc.uhIout, &Data_MovAvg_Iout_PFC);  
   //*** Data averaging/filtering END ***//______________________________________      
 
@@ -1158,7 +1164,8 @@ if(! single_phase)// this turns phase shedding off
       PFC_VoltageControl.uhIpkIoutFF = 0;
       PFC_VoltageControl.SoftStartup = RUNNING;
       Control_Data.uwVoutSetPoint = Control_Data.uhAvgVout;
-      if(DCP_MTH_RampInit((int32_t)Control_Data.uhAvgVout, (int32_t)Control_Data.uhVoutRef, DPC_SOFTSTARTUP_DURATION, &Vout_PFC_Ramp)){
+      if(DCP_MTH_RampInit((int32_t)Control_Data.uhAvgVout, (int32_t)Control_Data.uhVoutRef, DPC_SOFTSTARTUP_DURATION, &Vout_PFC_Ramp))
+      {
 //        eb1= 30; //error managment TBD
         }       
     }    
