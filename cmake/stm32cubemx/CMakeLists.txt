@@ -39,15 +39,6 @@ set(MX_Application_Src
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Src/sysmem.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Src/syscalls.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../startup_stm32g474xx.s
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/BSP/DPC_FW_PACK/Src/DPC_CommonData.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/BSP/DPC_FW_PACK/Src/DPC_FSM.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/BSP/DPC_FW_PACK/Src/DPC_Faulterror.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/BSP/DPC_FW_PACK/Src/DPC_LUT.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/BSP/DPC_FW_PACK/Src/DPC_Loopctrl.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/BSP/DPC_FW_PACK/Src/DPC_Math.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/BSP/DPC_FW_PACK/Src/DPC_Pid.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/BSP/DPC_FW_PACK/Src/DPC_Telemetry.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/BSP/DPC_FW_PACK/Src/DPC_Timeout.c
 )
 
 # STM32 HAL/LL Drivers
@@ -88,6 +79,18 @@ set(STM32_Drivers_Src
 
 # Drivers Midllewares
 
+# DPC BSP Sources
+set(DPC_BSP_Src
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/BSP/DPC_FW_PACK/Src/DPC_FSM.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/BSP/DPC_FW_PACK/Src/DPC_LUT.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/BSP/DPC_FW_PACK/Src/DPC_Math.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/BSP/DPC_FW_PACK/Src/DPC_Pid.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/BSP/DPC_FW_PACK/Src/DPC_Timeout.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/BSP/DPC_FW_PACK/Src/DPC_Telemetry.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/BSP/DPC_FW_PACK/Src/DPC_CommonData.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/BSP/DPC_FW_PACK/Src/DPC_Loopctrl.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/BSP/DPC_FW_PACK/Src/DPC_Faulterror.c
+)
 
 
 # Link directories setup
@@ -97,9 +100,9 @@ set(MX_LINK_DIRS
 # Project static libraries
 set(MX_LINK_LIBS 
     STM32_Drivers
-    ${TOOLCHAIN_LINK_LIBRARIES}
     DPC_AverageCurrentControl
-    m
+    ${TOOLCHAIN_LINK_LIBRARIES}
+    
 )
 # Interface library for includes and symbols
 add_library(stm32cubemx INTERFACE)
@@ -114,6 +117,9 @@ target_link_libraries(STM32_Drivers PUBLIC stm32cubemx)
 
 # Add STM32CubeMX generated application sources to the project
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE ${MX_Application_Src})
+
+# Add DPC BSP sources to the project
+target_sources(${CMAKE_PROJECT_NAME} PRIVATE ${DPC_BSP_Src})
 
 # Link directories setup
 target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE ${MX_LINK_DIRS})

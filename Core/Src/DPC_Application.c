@@ -111,7 +111,7 @@ DPC_LPCNTRL_ConverterControl_t PFC_Control;
 
 uint8_t rx_buff[3];
 uint16_t Vbus_ref_rx=0;
-bool single_phase = DPC_PHASE_INVERTER_SINGLE; // this gives us one phase only
+bool single_phase = DPC_PHASE_INVERTER_SINGLE; // this gives us one phase only makee sure it doesn't get wipped out
 
 //*** STRUCT DEFINITION END ***//
 
@@ -186,7 +186,7 @@ void DPC_APPLICATION_Init(void)
    Control_Data.VdcGain = (float)((float)DPC_VBUS_GAIN * (float)1.0f);
    Control_Data.uhVinRmsMin = (DPC_VIN_MIN * DPC_VIN_MIN_TOLERANCE) / DPC_VIN_TOLERANCE_DIV;
    Control_Data.uhVinRmsMax = (DPC_VIN_MAX * DPC_VIN_MAX_TOLERANCE) / DPC_VIN_TOLERANCE_DIV;
-   Control_Data.uhVinRmsFactor = (uint16_t)roundf((float)448.0 * (float)2.60360551431601 / (float)Control_Data.VacGain);
+   Control_Data.uhVinRmsFactor = (uint16_t)roundf((float)448.0 * (float)2.60360551431601 / (float)Control_Data.VacGain);//TODO get rid of magic numbers
    Control_Data.uhVinRmsDer = (DPC_VIN_MIN_DER * DPC_VIN_MIN_DER_TOLERANCE) / DPC_VIN_TOLERANCE_DIV;
    Control_Data.uhVoutRef = (uint16_t)roundf((float)DPC_VBUS_REF_DEFAULT * (float)Control_Data.VdcGain);
    Control_Data.uhVoutBurstMax = (uint16_t)(roundf((float)Control_Data.uhVoutRef * (float)DPC_VBURST_UPDATE_COEFF_MAX));

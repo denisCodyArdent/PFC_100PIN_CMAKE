@@ -31,7 +31,6 @@
 #include "usart.h"
 #include "gpio.h"
 #include "DPC_Application.h"
-
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -97,11 +96,9 @@ int main(void)
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
-  /* need to not init non used inits.*/
   MX_GPIO_Init();
   MX_DMA_Init();
   MX_ADC2_Init();
-  
   MX_COMP1_Init();
   MX_COMP2_Init();
   MX_COMP3_Init();

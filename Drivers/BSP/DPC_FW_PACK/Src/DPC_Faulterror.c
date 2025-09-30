@@ -36,7 +36,7 @@
   ******************************************************************************
   */
 /* Includes ------------------------------------------------------------------*/
-
+#include <stdint.h>
 #ifdef STM32G474xx
   #include "stm32g4xx_hal.h"
 #endif
@@ -51,7 +51,7 @@
 /* Private variables ---------------------------------------------------------*/
 uint32_t uwFaultErrorVector;
 
-/* Private typedef -----------------------------------------------------------*/
+/* Privatfix te typedef -----------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
 
 /**
@@ -209,67 +209,67 @@ if(uwFaultErrorVector & 0x0000FFFF){
 }
 else{
    if(uwFaultErrorVector & ERROR_PLL){
-      uwFaultErrorVector &= !ERROR_PLL;
+      uwFaultErrorVector &= ~ERROR_PLL;
       uwErVecLocal = ERASE_OK;
     }
     else if(uwFaultErrorVector & ERROR_IDLE){
-      uwFaultErrorVector &= !ERROR_IDLE;
+      uwFaultErrorVector &= ~ERROR_IDLE;
       uwErVecLocal = ERASE_OK;
     }            
     else if(uwFaultErrorVector & ERROR_START_INRS){
-      uwFaultErrorVector &= !ERROR_START_INRS;
+      uwFaultErrorVector &= ~ERROR_START_INRS;
       uwErVecLocal = ERASE_OK;
     }           
     else if(uwFaultErrorVector & ERROR_FSM){
-      uwFaultErrorVector &= !ERROR_FSM;
+      uwFaultErrorVector &= ~ERROR_FSM;
       uwErVecLocal = ERASE_OK;
     }
     else if(uwFaultErrorVector & ERROR_PFC_UVLO){
-      uwFaultErrorVector &= !ERROR_PFC_UVLO;
+      uwFaultErrorVector &= ~ERROR_PFC_UVLO;
       uwErVecLocal = ERASE_OK;
     }
     else if(uwFaultErrorVector & ERROR_BRS){
-      uwFaultErrorVector &= !ERROR_BRS;
+      uwFaultErrorVector &= ~ERROR_BRS;
       uwErVecLocal = ERASE_OK;
     }
     else if(uwFaultErrorVector & ERROR_AC_UV){
-      uwFaultErrorVector &= !ERROR_AC_UV;
+      uwFaultErrorVector &= ~ERROR_AC_UV;
       uwErVecLocal = ERASE_OK;
     }
     else if(uwFaultErrorVector & ERROR_PLL_OR){
-      uwFaultErrorVector &= !ERROR_PLL_OR;
+      uwFaultErrorVector &= ~ERROR_PLL_OR;
       uwErVecLocal = ERASE_OK;
     }
     else if(uwFaultErrorVector & ERROR_PFC_RUN){
-      uwFaultErrorVector &= !ERROR_PFC_RUN;
+      uwFaultErrorVector &= ~ERROR_PFC_RUN;
       uwErVecLocal = ERASE_OK;
     }
     else if(uwFaultErrorVector & ERROR_AC_UVLO){
-      uwFaultErrorVector &= !ERROR_AC_UVLO;
+      uwFaultErrorVector &= ~ERROR_AC_UVLO;
       uwErVecLocal = ERASE_OK;
     }
     else if(uwFaultErrorVector & ERROR_AC_OFF){
-      uwFaultErrorVector &= !ERROR_AC_OFF;
+      uwFaultErrorVector &= ~ERROR_AC_OFF;
       uwErVecLocal = ERASE_OK;
     }
     else if(uwFaultErrorVector & ERROR_PFC){
-      uwFaultErrorVector &= !ERROR_PFC;
+      uwFaultErrorVector &= ~ERROR_PFC;
       uwErVecLocal = ERASE_OK;
     }
     else if(uwFaultErrorVector & ERROR_PFC_ERRSeq){
-      uwFaultErrorVector &= !ERROR_PFC_ERRSeq;
+      uwFaultErrorVector &= ~ERROR_PFC_ERRSeq;
       uwErVecLocal = ERASE_OK;
     }
     else if(uwFaultErrorVector & ERROR_DC_UV){
-      uwFaultErrorVector &= !ERROR_DC_UV;
+      uwFaultErrorVector &= ~ERROR_DC_UV;
       uwErVecLocal = ERASE_OK;
     }
     else if(uwFaultErrorVector & ERROR_AC_OV){
-      uwFaultErrorVector &= !ERROR_AC_OV;
+      uwFaultErrorVector &= ~ERROR_AC_OV;
       uwErVecLocal = ERASE_OK;
     }
     else if(uwFaultErrorVector & ERROR_AC_ZVD){
-      uwFaultErrorVector &= !ERROR_AC_ZVD;
+      uwFaultErrorVector &= ~ERROR_AC_ZVD;
       uwErVecLocal = ERASE_OK;
     }   
    if(uwFaultErrorVector | 0x00000000){

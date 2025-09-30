@@ -126,10 +126,10 @@ void Error_Handler(void);
 #define I_LTOT_GPIO_Port GPIOB
 #define TEMP_Pin GPIO_PIN_15
 #define TEMP_GPIO_Port GPIOB
-#define InMainsL_Pin GPIO_PIN_8
-#define InMainsL_GPIO_Port GPIOD
-#define InMainsA_Pin GPIO_PIN_9
-#define InMainsA_GPIO_Port GPIOD
+#define InMainsACL_Pin GPIO_PIN_8
+#define InMainsACL_GPIO_Port GPIOD
+#define InMainsACN_Pin GPIO_PIN_9
+#define InMainsACN_GPIO_Port GPIOD
 #define DAB_EN_Pin GPIO_PIN_10
 #define DAB_EN_GPIO_Port GPIOD
 #define Essential_RLY_Pin GPIO_PIN_12

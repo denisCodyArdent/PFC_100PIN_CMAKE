@@ -197,7 +197,7 @@ void MX_ADC4_Init(void)
   sConfig.Channel = ADC_CHANNEL_12;
   sConfig.Rank = ADC_REGULAR_RANK_1;
   sConfig.SamplingTime = ADC_SAMPLETIME_2CYCLES_5;
-  sConfig.SingleDiff = ADC_DIFFERENTIAL_ENDED;
+  sConfig.SingleDiff = ADC_SINGLE_ENDED;
   sConfig.OffsetNumber = ADC_OFFSET_NONE;
   sConfig.Offset = 0;
   if (HAL_ADC_ConfigChannel(&hadc4, &sConfig) != HAL_OK)
@@ -317,7 +317,7 @@ void HAL_ADC_MspInit(ADC_HandleTypeDef* adcHandle)
     PD8     ------> ADC4_IN12
     PD9     ------> ADC4_IN13
     */
-    GPIO_InitStruct.Pin = InMainsL_Pin|InMainsA_Pin;
+    GPIO_InitStruct.Pin = InMainsACL_Pin|InMainsACN_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
@@ -394,7 +394,7 @@ void HAL_ADC_MspDeInit(ADC_HandleTypeDef* adcHandle)
     PD8     ------> ADC4_IN12
     PD9     ------> ADC4_IN13
     */
-    HAL_GPIO_DeInit(GPIOD, InMainsL_Pin|InMainsA_Pin);
+    HAL_GPIO_DeInit(GPIOD, InMainsACL_Pin|InMainsACN_Pin);
 
     /* ADC4 DMA DeInit */
     HAL_DMA_DeInit(adcHandle->DMA_Handle);

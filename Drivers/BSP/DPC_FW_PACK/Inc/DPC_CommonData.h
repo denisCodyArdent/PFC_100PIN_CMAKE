@@ -46,6 +46,7 @@
 #include "DPC_Lib_Conf.h"
 #include "stdbool.h"
 #include "math.h"
+#include "stdint.h"
 
 
 
