@@ -491,7 +491,7 @@ bool DPC_FSM_INIT_Func(void)
 bool RetVal = true; 
 
 
-MAINS_SW_ON;
+MAINS_SW_ON; // this routes the mains to the pfc stage 
 DPC_FAULTERROR_LIST_TypeDef ProtectionDetect_status = NO_FAULT;
   
   ProtectionDetect_status = DPC_ProtectionDetect();
@@ -526,7 +526,7 @@ DPC_FAULTERROR_LIST_TypeDef ProtectionDetect_status = NO_FAULT;
 
     if (PFC_Control.ConversionStart){
       if (PFC_Control.ConversionMode == DPC_PFC_MODE){ MAINS_SW_ON;
-                        //*** No-Load Start-up
+                        //*** No-Load Start-up this is what we will do and not allow the other converter to start yet
                         if (Data_Avg_Iout_PFC.stage_3.uhAvgVal < Control_Data.uhIdcLoadConnected){
                             Current_Control.ZvdFilter = ENABLE;
                             PFC_Control.Flag = SET;
@@ -590,8 +590,19 @@ DPC_FAULTERROR_LIST_TypeDef ProtectionDetect_status = NO_FAULT;
           DPC_TO_Set(DPC_TO_PFC_START, DPC_TO_PFC_START_TICK);
           PFC_Control.Flag = RESET;
         }
-        if (DPC_TO_Check(DPC_TO_PFC_START) == TO_OUT_TOOK){
+        if (DPC_TO_Check(DPC_TO_PFC_START) == TO_OUT_TOOK){ //this gives 100mS to get Vrms stable
+         
+          { // check that the input voltags is ok
+            if (Control_Data.uhVinPreSwitchRmsVolt>=Control_Data.uhVinRmsMin && 
+            Control_Data.uhVinPreSwitchRmsVolt<=Control_Data.uhVinRmsMax)
+            {PFC_Control.ConversionMode = DPC_PFC_MODE;
+              //TODO need to put in mans sw on etc
+            }
+            else
+            {PFC_Control.ConversionMode = DPC_INVERTER_MODE;
+            } 
           
+        }
           if (PFC_Control.ConversionMode == DPC_PFC_MODE){
             PFC_VoltageControl.SoftStartup = START;
             PFC_VoltageControl.VoltageControl = ENABLE;
@@ -670,7 +681,8 @@ DPC_FAULTERROR_LIST_TypeDef ProtectionDetect_status = NO_FAULT;
         
 //           if (PFC_Control.ConversionMode == DPC_PFC_MODE){
                   //BURST DETECTION IN PFC MODE
-              if ((Data_Avg_Vout_PFC.stage_1.uhAvgVal > Control_Data.uhVoutBurstMax) || (Data_Avg_Iout_PFC.stage_3.uhAvgVal < Control_Data.uhIdcLoadDisconnected)){
+              if ((Data_Avg_Vout_PFC.stage_1.uhAvgVal > Control_Data.uhVoutBurstMax) ||
+               (Data_Avg_Iout_PFC.stage_3.uhAvgVal < Control_Data.uhIdcLoadDisconnected)){
                 PFC_Control.Flag = SET;
                 PFC_Control.ubS = BURST_MODE;
                 PFC_Control.ubRunState = BURST_MODE;
@@ -706,12 +718,12 @@ DPC_FAULTERROR_LIST_TypeDef ProtectionDetect_status = NO_FAULT;
         }
 
 ////        // DROP-OUTPUT DETECT CONDITION 
-////        if (Data_Avg_Vin_PFC.stage_1.uhAvgVal <= Control_Data.uhVinDropoutThresholdDetect){          
-////          PFC_Control.Flag = SET;
-////          PFC_Control.ubS = DROP_OUT;
-////          PFC_Control.ubRunState = DROP_OUT;
-////          break;
-////        }       
+       if (Data_Avg_Vin_PFC.stage_1.uhAvgVal <= Control_Data.uhVinDropoutThresholdDetect){          
+        PFC_Control.Flag = SET;
+          PFC_Control.ubS = DROP_OUT;
+         PFC_Control.ubRunState = DROP_OUT;
+          break;
+        }       
         break;
 
     }//RUN_INVERTER_MODE

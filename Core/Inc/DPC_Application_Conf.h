@@ -90,7 +90,7 @@
 ///*** Protection (3�) -------------------------------
 //// AC�Section�(1�)
 #define    DPC_OCP_EN                      true  // Inductor over-current protection (OCP) Enable [Expressed in Boolean]
-#define    DPC_OCP_VALUE                   19.0  // Inductor over-current protection (OCP) value, to avoid inductor saturation [Expressed in Ampere]
+#define    DPC_OCP_VALUE                   12.0  // Inductor over-current protection (OCP) value, to avoid inductor saturation [Expressed in Ampere]
 //// DC�Section�(2�)
 #define    DPC_VBUS_OVP 	          440.0  // Vbus over-voltage protection (OVP) value [Expressed in Volt]
 #define    DPC_VBUS_UVP_PFC               350.0  // Vbus under-voltage protection (UVP) value in PFC mode [Expressed in Volt]
@@ -175,6 +175,7 @@
 #define     DPC_TO_PFC_START_TICK   100
 #define     DPC_TO_PFC_STOP_TICK   1000
 #define     DPC_TO_DROP_OUT_TICK     25
+#define     DPC_TO_VOLTAGE_STABLE_TICK  2000
 
 //*** Current thresholds parameters BEGIN ***//  
 #define    DPC_ITH_REFH_MAX         4000   // IthRefHMax,
@@ -243,11 +244,12 @@
 #define     DPC_VINP_FF_EN       ENABLE  // Input voltage feed-forward Enable [Expressed in Boolean]
 
 
-#define     DPC_TO_INRUSH     TO_INDX1
-#define     DPC_TO_RELAY_COMP TO_INDX2
-#define     DPC_TO_PFC_START  TO_INDX3
-#define     DPC_TO_PFC_STOP   TO_INDX4
-#define     DPC_TO_DROP_OUT   TO_INDX5
+#define     DPC_TO_INRUSH       TO_INDX1
+#define     DPC_TO_RELAY_COMP   TO_INDX2
+#define     DPC_TO_PFC_START    TO_INDX3
+#define     DPC_TO_PFC_STOP     TO_INDX4
+#define     DPC_TO_DROP_OUT     TO_INDX5
+#define   DPC_TO_VOLTAGE_STABLE TO_INDX6    
 
 //*** LUT control parameters BEGIN ***//
 #define    DPC_LUT_POINTS            800   // Number of LUT points

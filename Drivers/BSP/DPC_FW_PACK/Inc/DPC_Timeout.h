@@ -54,7 +54,7 @@ typedef enum{
     TO_OUT_TOOK    
   } TO_RET_STATE;   
 
-#define TO_MAX_NUMBER      7
+#define TO_MAX_NUMBER      8
 
 
 #define TO_TELEM_1     0
@@ -64,6 +64,7 @@ typedef enum{
 #define TO_INDX3       4
 #define TO_INDX4       5
 #define TO_INDX5       6
+#define TO_INDX6       7
 
 #define TEL_TIMEOUT_VAL     200
   
