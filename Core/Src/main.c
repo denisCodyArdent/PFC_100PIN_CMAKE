@@ -30,7 +30,7 @@
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
-#include "DPC_Application.h"
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -99,7 +99,6 @@ int main(void)
   MX_GPIO_Init();
   MX_DMA_Init();
   MX_ADC2_Init();
-  MX_ADC4_Init();
   MX_COMP1_Init();
   MX_COMP2_Init();
   MX_COMP3_Init();
@@ -122,7 +121,7 @@ int main(void)
   MX_SPI4_Init();
   MX_USART1_UART_Init();
   MX_USART2_UART_Init();
-  
+  MX_ADC4_Init();
   /* USER CODE BEGIN 2 */
   DPC_APPLICATION_Init();
   /* USER CODE END 2 */

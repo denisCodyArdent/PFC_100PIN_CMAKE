@@ -15,13 +15,11 @@ set(MX_Include_Dirs
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/CMSIS/Include
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/BSP/DPC_FW_PACK/Inc
 )
 
 # STM32CubeMX generated application sources
 set(MX_Application_Src
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Src/main.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Src/DPC_Application.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Src/gpio.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Src/adc.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Src/comp.c
@@ -79,28 +77,15 @@ set(STM32_Drivers_Src
 
 # Drivers Midllewares
 
-# DPC BSP Sources
-set(DPC_BSP_Src
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/BSP/DPC_FW_PACK/Src/DPC_FSM.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/BSP/DPC_FW_PACK/Src/DPC_LUT.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/BSP/DPC_FW_PACK/Src/DPC_Math.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/BSP/DPC_FW_PACK/Src/DPC_Pid.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/BSP/DPC_FW_PACK/Src/DPC_Timeout.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/BSP/DPC_FW_PACK/Src/DPC_Telemetry.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/BSP/DPC_FW_PACK/Src/DPC_CommonData.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/BSP/DPC_FW_PACK/Src/DPC_Loopctrl.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/BSP/DPC_FW_PACK/Src/DPC_Faulterror.c
-)
 
 
 # Link directories setup
 set(MX_LINK_DIRS
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/BSP/DPC_FW_PACK/Lib
+
 )
 # Project static libraries
 set(MX_LINK_LIBS 
     STM32_Drivers
-    DPC_AverageCurrentControl
     ${TOOLCHAIN_LINK_LIBRARIES}
     
 )
@@ -117,9 +102,6 @@ target_link_libraries(STM32_Drivers PUBLIC stm32cubemx)
 
 # Add STM32CubeMX generated application sources to the project
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE ${MX_Application_Src})
-
-# Add DPC BSP sources to the project
-target_sources(${CMAKE_PROJECT_NAME} PRIVATE ${DPC_BSP_Src})
 
 # Link directories setup
 target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE ${MX_LINK_DIRS})

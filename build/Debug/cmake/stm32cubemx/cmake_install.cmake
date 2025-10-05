@@ -1,8 +1,8 @@
-# Install script for directory: D:/Ardent Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx
+# Install script for directory: C:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/100_pin_cmake")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/100")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

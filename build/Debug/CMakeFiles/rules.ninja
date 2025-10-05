@@ -62,7 +62,7 @@ rule C_COMPILER__STM32_Drivers_unscanned_Debug
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = C:\ST\STM32CubeCLT_1.18.0\CMake\bin\cmake.exe --regenerate-during-build -S"D:\Ardent Repo\PFC_100PIN_CMAKE" -B"D:\Ardent Repo\PFC_100PIN_CMAKE\build\Debug"
+  command = C:\ST\STM32CubeCLT_1.18.0\CMake\bin\cmake.exe --regenerate-during-build -SC:\Repo\PFC_100PIN_CMAKE -BC:\Repo\PFC_100PIN_CMAKE\build\Debug
   description = Re-running CMake...
   generator = 1
 

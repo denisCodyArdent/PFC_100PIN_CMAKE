@@ -1,8 +1,8 @@
-# Install script for directory: D:/Ardent Repo/PFC_100PIN_CMAKE
+# Install script for directory: C:/Repo/PFC_100PIN_CMAKE
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/100_pin_cmake")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/100")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("D:/Ardent Repo/PFC_100PIN_CMAKE/build/Debug/cmake/stm32cubemx/cmake_install.cmake")
+  include("C:/Repo/PFC_100PIN_CMAKE/build/Debug/cmake/stm32cubemx/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/Ardent Repo/PFC_100PIN_CMAKE/build/Debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Repo/PFC_100PIN_CMAKE/build/Debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
