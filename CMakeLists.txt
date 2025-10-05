@@ -28,14 +28,6 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
 project(${CMAKE_PROJECT_NAME})
 message("Build type: " ${CMAKE_BUILD_TYPE})
 
-# Set ARM Cortex-M4 specific flags
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard")
-set(CMAKE_ASM_FLAGS "${CMAKE_ASM_FLAGS} -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard")
-
-# Linker flags
-set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,-Map=${CMAKE_PROJECT_NAME}.map -Wl,--gc-sections -lm")
-
 # Enable CMake support for ASM and C languages
 enable_language(C ASM)
 
@@ -47,17 +39,29 @@ add_subdirectory(cmake/stm32cubemx)
 
 # Link directories setup
 target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
-    # Add user defined library search paths
+    # DPC library directory
+    Drivers/BSP/DPC_FW_PACK/Lib
 )
 
 # Add sources to executable
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE
-    # Add user sources here
+    # DPC Application sources
+    Core/Src/DPC_Application.c
+    Drivers/BSP/DPC_FW_PACK/Src/DPC_CommonData.c
+    Drivers/BSP/DPC_FW_PACK/Src/DPC_FSM.c
+    Drivers/BSP/DPC_FW_PACK/Src/DPC_Faulterror.c
+    Drivers/BSP/DPC_FW_PACK/Src/DPC_LUT.c
+    Drivers/BSP/DPC_FW_PACK/Src/DPC_Loopctrl.c
+    Drivers/BSP/DPC_FW_PACK/Src/DPC_Math.c
+    Drivers/BSP/DPC_FW_PACK/Src/DPC_Pid.c
+    Drivers/BSP/DPC_FW_PACK/Src/DPC_Telemetry.c
+    Drivers/BSP/DPC_FW_PACK/Src/DPC_Timeout.c
 )
 
 # Add include paths
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
-    # Add user defined include paths
+    # DPC include paths
+    Drivers/BSP/DPC_FW_PACK/Inc
 )
 
 # Add project symbols (macros)
@@ -71,6 +75,5 @@ list(REMOVE_ITEM CMAKE_C_IMPLICIT_LINK_LIBRARIES ob)
 # Add linked libraries
 target_link_libraries(${CMAKE_PROJECT_NAME}
     stm32cubemx
-
-    # Add user defined libraries
+    DPC_AverageCurrentControl
 )
