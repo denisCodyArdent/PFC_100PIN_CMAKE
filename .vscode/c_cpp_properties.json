@@ -10,7 +10,7 @@
                 "UNICODE",
                 "_UNICODE"
             ],
-            "compilerPath": "C:\\Users\\Denis-Indice\\gcc\\bin\\gcc.exe",
+            //"compilerPath": "C:\\Users\\Denis-Indice\\gcc\\bin\\gcc.exe",
             "cStandard": "c17",
             "cppStandard": "gnu++14",
             "intelliSenseMode": "windows-gcc-x64",

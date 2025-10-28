@@ -13,12 +13,17 @@
             "type": "cortex-debug",
             "runToEntryPoint": "main",
             "servertype": "jlink",
-            "serverpath": "C:/Program Files/SEGGER/JLink_V866/JLinkGDBServerCL.exe",
+            "serverpath": "C:/Program Files/SEGGER/JLink_V874a/JLinkGDBServerCL.exe",
             "serverArgs": [],
-            "device": "STM32G474VCT6",
-            "interface": "jtag",
+            "device": "STM32G474VC",
+            "interface": "swd",
             "serialNumber": "", //If you have more than one J-Link probe, add the serial number here.
             "svdFile": "./build/Debug//SVD/STM32G474.svd",
+            "liveWatch": {
+                    "enabled": true,
+                    "samplesPerSecond": 4 // Optional: Adjust the update rate
+                }
+
             //"armToolchainPath": "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/12.3 rel1/bin"
         }
     ]
