@@ -33,7 +33,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "DPC_Application.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -73,7 +73,7 @@ void SystemClock_Config(void);
   * @retval int
   */
 int main(void)
-{
+{ // minor change to suck a rebuild
 
   /* USER CODE BEGIN 1 */
 
@@ -98,7 +98,7 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_DMA_Init();
-  MX_ADC2_Init();
+  
   MX_COMP1_Init();
   MX_COMP2_Init();
   MX_COMP3_Init();
@@ -121,6 +121,7 @@ int main(void)
   MX_SPI4_Init();
   MX_USART1_UART_Init();
   MX_USART2_UART_Init();
+  MX_ADC2_Init();
   MX_ADC4_Init();
   /* USER CODE BEGIN 2 */
   DPC_APPLICATION_Init();
