@@ -148,8 +148,8 @@ if(uwFaultErrorVector != NO_FAULT){
   else if(uwFaultErrorVector & ERROR_AC_UVLO){
     uwFaErVecLocal = ERROR_AC_UVLO;
   }
-  else if(uwFaultErrorVector & ERROR_AC_OFF){
-    uwFaErVecLocal = ERROR_AC_OFF;
+  else if(uwFaultErrorVector & ERROR_AC_ON_INV){
+    uwFaErVecLocal = ERROR_AC_ON_INV;
   }
   else if(uwFaultErrorVector & ERROR_PFC){
     uwFaErVecLocal = ERROR_PFC;
@@ -248,8 +248,8 @@ else{
       uwFaultErrorVector &= ~ERROR_AC_UVLO;
       uwErVecLocal = ERASE_OK;
     }
-    else if(uwFaultErrorVector & ERROR_AC_OFF){
-      uwFaultErrorVector &= ~ERROR_AC_OFF;
+    else if(uwFaultErrorVector & ERROR_AC_ON_INV){
+      uwFaultErrorVector &= ~ERROR_AC_ON_INV;
       uwErVecLocal = ERASE_OK;
     }
     else if(uwFaultErrorVector & ERROR_PFC){

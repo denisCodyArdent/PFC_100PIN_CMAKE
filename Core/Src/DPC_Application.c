@@ -167,7 +167,7 @@ void DPC_APPLICATION_Init(void)
    Data_Avg_VinPreSwitch_PFC.stage_3.uhWeight = DPC_VIN_WEIGHT_3;
    //*** Relay control init ***//
    DPC_LPCNTRL_RelayControlInit(&PFC_Relay);
-   DPC_LPCNTRL_MainsSwControlInit(&Mains_SW_Relay);
+   DPC_LPCNTRL_MainsSwControlInit(&Mains_SW_Relay); // this makes them off
 
    //*** Voltage control init ***//
    DPC_LPCNTRL_VoltageControlInit(&PFC_VoltageControl);
@@ -322,7 +322,7 @@ HAL_FLASH_Lock();
    /*** Peripheral start/config END ***/
    
 //   HAL_UART_Receive_IT(&huart4,rx_buff,3);
-  PFC_Control.ConversionMode=DPC_PFC_MODE;
+  PFC_Control.ConversionMode=DPC_INVERTER_MODE;
   // this is safe and then will allow a check of faults
   
   /* PACK CODE END 2 */
@@ -976,6 +976,10 @@ bool RetVal = true;
           {PFC_Control.ConversionMode = DPC_INVERTER_MODE;
             MAINS_SW_OFF;
           }
+      if   (ProtectionDetect_status==ERROR_AC_ON_INV) // implies it is on DPC Inverter Mode
+            {
+              PFC_Control.ConversionMode=DPC_PFC_MODE;
+            }
           
     
       if (PFC_Control.Flag){
@@ -1607,7 +1611,8 @@ DPC_FAULTERROR_LIST_TypeDef RetVal = NO_FAULT;
   if((PFC_Control.ConversionMode=DPC_INVERTER_MODE) && (Control_Data.uhVinPreSwitchRms > Control_Data.uhVinRmsMin))
   {
     
-    RetVal|=ERROR_PFC_RUN;
+    RetVal|=ERROR_AC_ON_INV;
+    
     PFC_Protection.ubErrorCode =12;
     //todo next state is start this is time to change modes and make hte pfc run
 

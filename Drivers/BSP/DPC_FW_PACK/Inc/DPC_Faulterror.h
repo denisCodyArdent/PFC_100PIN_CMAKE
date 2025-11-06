@@ -84,7 +84,7 @@ typedef enum
   ERROR_PLL_OR          = 0x00800000,           //ERROR PLL Out of Range
   ERROR_PFC_RUN         = 0x01000000,           //ERROR_PFC_RUN
   ERROR_AC_UVLO         = 0x02000000,           //ERROR Under-Voltage-Lockout AC
-  ERROR_AC_OFF          = 0x04000000,           //ERROR No AC . Use this to wait for a master on 
+  ERROR_AC_ON_INV       = 0x04000000,           //ERROR No AC . Use this to wait for a master on 
   ERROR_PFC             = 0x08000000,           //ERROR during PFC mode
   ERROR_PFC_ERRSeq      = 0x10000000,           //ERROR 3Phase sequence connection
   ERROR_DC_UV           = 0x20000000,           //ERROR Under-Voltage-DC  
