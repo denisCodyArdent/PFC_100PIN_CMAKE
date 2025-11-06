@@ -162,7 +162,9 @@ void DPC_APPLICATION_Init(void)
    Data_Avg_Vin_PFC.stage_2.uhWeight = DPC_VIN_WEIGHT_2;
    Data_Avg_Vin_PFC.stage_3.uhWeight = DPC_VIN_WEIGHT_3; 
 
-   
+    Data_Avg_VinPreSwitch_PFC.stage_1.uhWeight = DPC_VIN_WEIGHT_1;
+   Data_Avg_VinPreSwitch_PFC.stage_2.uhWeight = DPC_VIN_WEIGHT_2;
+   Data_Avg_VinPreSwitch_PFC.stage_3.uhWeight = DPC_VIN_WEIGHT_3;
    //*** Relay control init ***//
    DPC_LPCNTRL_RelayControlInit(&PFC_Relay);
    DPC_LPCNTRL_MainsSwControlInit(&Mains_SW_Relay);
@@ -531,18 +533,18 @@ DPC_FAULTERROR_LIST_TypeDef ProtectionDetect_status = NO_FAULT;
                             Current_Control.ZvdFilter = ENABLE;
                             PFC_Control.Flag = SET;
                             PFC_Control.ubS = BURST_MODE;
-                      PFC_Control.ubRunState = BURST_MODE;
-                      DPC_FSM_State_Set(DPC_FSM_RUN);
-                    }
+                            PFC_Control.ubRunState = BURST_MODE;
+                            DPC_FSM_State_Set(DPC_FSM_RUN);
+                        }
                         //*** Load Start-up
-                    else {
-                      if ((Data_Avg_Iout_PFC.stage_3.uhAvgVal >= Control_Data.uhIdcLoadConnected) && (Data_Avg_Iout_PFC.stage_3.uhAvgVal <= Control_Data.uhIdcLoadStartupMaxValue)){
-                      Current_Control.ZvdFilter = ENABLE;
-                      PFC_Control.Flag = SET;
-                      PFC_Control.ubS = SOFT_STARTUP;
-                      DPC_FSM_State_Set(DPC_FSM_START);
-                      }
-                    } //else
+                        else {
+                            if ((Data_Avg_Iout_PFC.stage_3.uhAvgVal >= Control_Data.uhIdcLoadConnected) && (Data_Avg_Iout_PFC.stage_3.uhAvgVal <= Control_Data.uhIdcLoadStartupMaxValue)){
+                                Current_Control.ZvdFilter = ENABLE;
+                                PFC_Control.Flag = SET;
+                                PFC_Control.ubS = SOFT_STARTUP;
+                                DPC_FSM_State_Set(DPC_FSM_START);
+                            }
+                        } //else
            }//if (PFC_Control == DPC_PFC_MODE)
       else if (PFC_Control.ConversionMode == DPC_INVERTER_MODE){
         Current_Control.ZvdFilter = ENABLE;
@@ -1083,7 +1085,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   
    //*** Vinp (ac) conversion in volt BEGIN ***//____________________________________
   Control_Data.uhVinRmsVolt = (uint16_t)(((uint32_t)Control_Data.uhVinRms * Control_Data.uhVinRmsFactor)/1024); //vinp conversion in volt
-  Control_Data.uhVinPreSwitchRms = (uint16_t)(((uint32_t)Control_Data.uhVinRms * Control_Data.uhVinRmsFactor)/1024); //vinp conversion in volt
+  Control_Data.uhVinPreSwitchRmsVolt = (uint16_t)(((uint32_t)Control_Data.uhVinPreSwitchRms * Control_Data.uhVinRmsFactor)/1024); //vinp conversion in volt
    //*** Vinp (ac) conversion in volt END ***//______________________________________
 
 
@@ -1327,24 +1329,24 @@ if(! single_phase)// this turns phase shedding off
   Control_Data.uhAvgIL3 = Data_adc.uhIL3;
 
   if ((PFC_Control.ubS == FREQUENCY_DETECT) && (Current_Control.FrequencyCheck == RUNNING)){
-    ++Current_Control.uwLineFrequencyMeasureCounter; 
-   }
-   else{
-  if (PFC_Control.ubS == BURST_MODE){
-    if (PFC_VoltageControl.BurstRising == START){
-      PFC_VoltageControl.wIpk = (int32_t)Current_Control.uwIpkRefBurst; //*** No-Load condition --> Voltage loop disabled (constant current, open-loop)***//     
-      PFC_VoltageControl.BurstRising = RUNNING;
-    }     
-  }// if (PFC_Control.ubS == PFC_BURST)
+    ++Current_Control.uwLineFrequencyMeasureCounter;
+  }
+  else{
+    if (PFC_Control.ubS == BURST_MODE){
+      if (PFC_VoltageControl.BurstRising == START){
+        PFC_VoltageControl.wIpk = (int32_t)Current_Control.uwIpkRefBurst; //*** No-Load condition --> Voltage loop disabled (constant current, open-loop)***//
+        PFC_VoltageControl.BurstRising = RUNNING;
+      }
+    }// if (PFC_Control.ubS == PFC_BURST)
 
-    //*** Average Current Control Loop Activation***// 
+    //*** Average Current Control Loop Activation***//
     if ((PFC_VoltageControl.BurstRising == RUNNING) || (PFC_Control.ubS == RUN_PFC_MODE) || (PFC_Control.ubS == RUN_INVERTER_MODE)){
-         DPC_AVGCC_AvgCurrentControlActivation(&Current_Control, &LUT_Tables, &PFC_PhaseShedding, &Data_adc, &Data_Set1, &Data_Set2, &Control_Data, &PFC_Control, (int32_t)PFC_VoltageControl.wIpk);         
+      DPC_AVGCC_AvgCurrentControlActivation(&Current_Control, &LUT_Tables, &PFC_PhaseShedding, &Data_adc, &Data_Set1, &Data_Set2, &Control_Data, &PFC_Control, (int32_t)PFC_VoltageControl.wIpk);
     }
 
 
-  //*** Current Control Loop Mains-Synchronization ***//    
-  DPC_AVGCC_AvgCurrentControlSynch(&Current_Control);
+    //*** Current Control Loop Mains-Synchronization ***//
+    DPC_AVGCC_AvgCurrentControlSynch(&Current_Control);
   }//else
 // TEST_1_OFF; //Tmul=10us with High-Speed OPT
 }//if (htim->Instance == TIM3)

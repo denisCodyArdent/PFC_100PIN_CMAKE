@@ -53,7 +53,7 @@ build CMakeFiles/100_pin_cmake.dir/Core/Src/main.c.obj: C_COMPILER__100_pin_cmak
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\100_pin_cmake.dir\Core\Src\main.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/Drivers/BSP/DPC_FW_PACK/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\100_pin_cmake.dir
   OBJECT_FILE_DIR = CMakeFiles\100_pin_cmake.dir\Core\Src
@@ -62,7 +62,7 @@ build CMakeFiles/100_pin_cmake.dir/Core/Src/gpio.c.obj: C_COMPILER__100_pin_cmak
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\100_pin_cmake.dir\Core\Src\gpio.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/Drivers/BSP/DPC_FW_PACK/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\100_pin_cmake.dir
   OBJECT_FILE_DIR = CMakeFiles\100_pin_cmake.dir\Core\Src
@@ -71,7 +71,7 @@ build CMakeFiles/100_pin_cmake.dir/Core/Src/adc.c.obj: C_COMPILER__100_pin_cmake
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\100_pin_cmake.dir\Core\Src\adc.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/Drivers/BSP/DPC_FW_PACK/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\100_pin_cmake.dir
   OBJECT_FILE_DIR = CMakeFiles\100_pin_cmake.dir\Core\Src
@@ -80,7 +80,7 @@ build CMakeFiles/100_pin_cmake.dir/Core/Src/comp.c.obj: C_COMPILER__100_pin_cmak
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\100_pin_cmake.dir\Core\Src\comp.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/Drivers/BSP/DPC_FW_PACK/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\100_pin_cmake.dir
   OBJECT_FILE_DIR = CMakeFiles\100_pin_cmake.dir\Core\Src
@@ -89,7 +89,7 @@ build CMakeFiles/100_pin_cmake.dir/Core/Src/dac.c.obj: C_COMPILER__100_pin_cmake
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\100_pin_cmake.dir\Core\Src\dac.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/Drivers/BSP/DPC_FW_PACK/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\100_pin_cmake.dir
   OBJECT_FILE_DIR = CMakeFiles\100_pin_cmake.dir\Core\Src
@@ -98,7 +98,7 @@ build CMakeFiles/100_pin_cmake.dir/Core/Src/dma.c.obj: C_COMPILER__100_pin_cmake
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\100_pin_cmake.dir\Core\Src\dma.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/Drivers/BSP/DPC_FW_PACK/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\100_pin_cmake.dir
   OBJECT_FILE_DIR = CMakeFiles\100_pin_cmake.dir\Core\Src
@@ -107,7 +107,7 @@ build CMakeFiles/100_pin_cmake.dir/Core/Src/fdcan.c.obj: C_COMPILER__100_pin_cma
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\100_pin_cmake.dir\Core\Src\fdcan.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/Drivers/BSP/DPC_FW_PACK/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\100_pin_cmake.dir
   OBJECT_FILE_DIR = CMakeFiles\100_pin_cmake.dir\Core\Src
@@ -116,7 +116,7 @@ build CMakeFiles/100_pin_cmake.dir/Core/Src/hrtim.c.obj: C_COMPILER__100_pin_cma
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\100_pin_cmake.dir\Core\Src\hrtim.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/Drivers/BSP/DPC_FW_PACK/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\100_pin_cmake.dir
   OBJECT_FILE_DIR = CMakeFiles\100_pin_cmake.dir\Core\Src
@@ -125,7 +125,7 @@ build CMakeFiles/100_pin_cmake.dir/Core/Src/i2c.c.obj: C_COMPILER__100_pin_cmake
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\100_pin_cmake.dir\Core\Src\i2c.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/Drivers/BSP/DPC_FW_PACK/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\100_pin_cmake.dir
   OBJECT_FILE_DIR = CMakeFiles\100_pin_cmake.dir\Core\Src
@@ -134,7 +134,7 @@ build CMakeFiles/100_pin_cmake.dir/Core/Src/opamp.c.obj: C_COMPILER__100_pin_cma
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\100_pin_cmake.dir\Core\Src\opamp.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/Drivers/BSP/DPC_FW_PACK/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\100_pin_cmake.dir
   OBJECT_FILE_DIR = CMakeFiles\100_pin_cmake.dir\Core\Src
@@ -143,7 +143,7 @@ build CMakeFiles/100_pin_cmake.dir/Core/Src/spi.c.obj: C_COMPILER__100_pin_cmake
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\100_pin_cmake.dir\Core\Src\spi.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/Drivers/BSP/DPC_FW_PACK/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\100_pin_cmake.dir
   OBJECT_FILE_DIR = CMakeFiles\100_pin_cmake.dir\Core\Src
@@ -152,7 +152,7 @@ build CMakeFiles/100_pin_cmake.dir/Core/Src/tim.c.obj: C_COMPILER__100_pin_cmake
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\100_pin_cmake.dir\Core\Src\tim.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/Drivers/BSP/DPC_FW_PACK/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\100_pin_cmake.dir
   OBJECT_FILE_DIR = CMakeFiles\100_pin_cmake.dir\Core\Src
@@ -161,7 +161,7 @@ build CMakeFiles/100_pin_cmake.dir/Core/Src/usart.c.obj: C_COMPILER__100_pin_cma
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\100_pin_cmake.dir\Core\Src\usart.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/Drivers/BSP/DPC_FW_PACK/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\100_pin_cmake.dir
   OBJECT_FILE_DIR = CMakeFiles\100_pin_cmake.dir\Core\Src
@@ -170,7 +170,7 @@ build CMakeFiles/100_pin_cmake.dir/Core/Src/stm32g4xx_it.c.obj: C_COMPILER__100_
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\100_pin_cmake.dir\Core\Src\stm32g4xx_it.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/Drivers/BSP/DPC_FW_PACK/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\100_pin_cmake.dir
   OBJECT_FILE_DIR = CMakeFiles\100_pin_cmake.dir\Core\Src
@@ -179,7 +179,7 @@ build CMakeFiles/100_pin_cmake.dir/Core/Src/stm32g4xx_hal_msp.c.obj: C_COMPILER_
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\100_pin_cmake.dir\Core\Src\stm32g4xx_hal_msp.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/Drivers/BSP/DPC_FW_PACK/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\100_pin_cmake.dir
   OBJECT_FILE_DIR = CMakeFiles\100_pin_cmake.dir\Core\Src
@@ -188,7 +188,7 @@ build CMakeFiles/100_pin_cmake.dir/Core/Src/sysmem.c.obj: C_COMPILER__100_pin_cm
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\100_pin_cmake.dir\Core\Src\sysmem.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/Drivers/BSP/DPC_FW_PACK/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\100_pin_cmake.dir
   OBJECT_FILE_DIR = CMakeFiles\100_pin_cmake.dir\Core\Src
@@ -197,7 +197,7 @@ build CMakeFiles/100_pin_cmake.dir/Core/Src/syscalls.c.obj: C_COMPILER__100_pin_
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\100_pin_cmake.dir\Core\Src\syscalls.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/Drivers/BSP/DPC_FW_PACK/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\100_pin_cmake.dir
   OBJECT_FILE_DIR = CMakeFiles\100_pin_cmake.dir\Core\Src
@@ -206,7 +206,7 @@ build CMakeFiles/100_pin_cmake.dir/Core/Src/DPC_Application.c.obj: C_COMPILER__1
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\100_pin_cmake.dir\Core\Src\DPC_Application.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/Drivers/BSP/DPC_FW_PACK/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\100_pin_cmake.dir
   OBJECT_FILE_DIR = CMakeFiles\100_pin_cmake.dir\Core\Src
@@ -224,7 +224,7 @@ build CMakeFiles/100_pin_cmake.dir/Drivers/BSP/DPC_FW_PACK/Src/DPC_CommonData.c.
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\100_pin_cmake.dir\Drivers\BSP\DPC_FW_PACK\Src\DPC_CommonData.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/Drivers/BSP/DPC_FW_PACK/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\100_pin_cmake.dir
   OBJECT_FILE_DIR = CMakeFiles\100_pin_cmake.dir\Drivers\BSP\DPC_FW_PACK\Src
@@ -233,7 +233,7 @@ build CMakeFiles/100_pin_cmake.dir/Drivers/BSP/DPC_FW_PACK/Src/DPC_FSM.c.obj: C_
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\100_pin_cmake.dir\Drivers\BSP\DPC_FW_PACK\Src\DPC_FSM.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/Drivers/BSP/DPC_FW_PACK/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\100_pin_cmake.dir
   OBJECT_FILE_DIR = CMakeFiles\100_pin_cmake.dir\Drivers\BSP\DPC_FW_PACK\Src
@@ -242,7 +242,7 @@ build CMakeFiles/100_pin_cmake.dir/Drivers/BSP/DPC_FW_PACK/Src/DPC_Faulterror.c.
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\100_pin_cmake.dir\Drivers\BSP\DPC_FW_PACK\Src\DPC_Faulterror.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/Drivers/BSP/DPC_FW_PACK/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\100_pin_cmake.dir
   OBJECT_FILE_DIR = CMakeFiles\100_pin_cmake.dir\Drivers\BSP\DPC_FW_PACK\Src
@@ -251,7 +251,7 @@ build CMakeFiles/100_pin_cmake.dir/Drivers/BSP/DPC_FW_PACK/Src/DPC_LUT.c.obj: C_
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\100_pin_cmake.dir\Drivers\BSP\DPC_FW_PACK\Src\DPC_LUT.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/Drivers/BSP/DPC_FW_PACK/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\100_pin_cmake.dir
   OBJECT_FILE_DIR = CMakeFiles\100_pin_cmake.dir\Drivers\BSP\DPC_FW_PACK\Src
@@ -260,7 +260,7 @@ build CMakeFiles/100_pin_cmake.dir/Drivers/BSP/DPC_FW_PACK/Src/DPC_Loopctrl.c.ob
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\100_pin_cmake.dir\Drivers\BSP\DPC_FW_PACK\Src\DPC_Loopctrl.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/Drivers/BSP/DPC_FW_PACK/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\100_pin_cmake.dir
   OBJECT_FILE_DIR = CMakeFiles\100_pin_cmake.dir\Drivers\BSP\DPC_FW_PACK\Src
@@ -269,7 +269,7 @@ build CMakeFiles/100_pin_cmake.dir/Drivers/BSP/DPC_FW_PACK/Src/DPC_Math.c.obj: C
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\100_pin_cmake.dir\Drivers\BSP\DPC_FW_PACK\Src\DPC_Math.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/Drivers/BSP/DPC_FW_PACK/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\100_pin_cmake.dir
   OBJECT_FILE_DIR = CMakeFiles\100_pin_cmake.dir\Drivers\BSP\DPC_FW_PACK\Src
@@ -278,7 +278,7 @@ build CMakeFiles/100_pin_cmake.dir/Drivers/BSP/DPC_FW_PACK/Src/DPC_Pid.c.obj: C_
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\100_pin_cmake.dir\Drivers\BSP\DPC_FW_PACK\Src\DPC_Pid.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/Drivers/BSP/DPC_FW_PACK/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\100_pin_cmake.dir
   OBJECT_FILE_DIR = CMakeFiles\100_pin_cmake.dir\Drivers\BSP\DPC_FW_PACK\Src
@@ -287,7 +287,7 @@ build CMakeFiles/100_pin_cmake.dir/Drivers/BSP/DPC_FW_PACK/Src/DPC_Telemetry.c.o
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\100_pin_cmake.dir\Drivers\BSP\DPC_FW_PACK\Src\DPC_Telemetry.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/Drivers/BSP/DPC_FW_PACK/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\100_pin_cmake.dir
   OBJECT_FILE_DIR = CMakeFiles\100_pin_cmake.dir\Drivers\BSP\DPC_FW_PACK\Src
@@ -296,7 +296,7 @@ build CMakeFiles/100_pin_cmake.dir/Drivers/BSP/DPC_FW_PACK/Src/DPC_Timeout.c.obj
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\100_pin_cmake.dir\Drivers\BSP\DPC_FW_PACK\Src\DPC_Timeout.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/Drivers/BSP/DPC_FW_PACK/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\100_pin_cmake.dir
   OBJECT_FILE_DIR = CMakeFiles\100_pin_cmake.dir\Drivers\BSP\DPC_FW_PACK\Src
@@ -311,8 +311,8 @@ build CMakeFiles/100_pin_cmake.dir/Drivers/BSP/DPC_FW_PACK/Src/DPC_Timeout.c.obj
 
 build 100_pin_cmake.elf: C_EXECUTABLE_LINKER__100_pin_cmake_Debug cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g4xx.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_comp.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dac.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dac_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_hrtim.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_opamp.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_opamp_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj CMakeFiles/100_pin_cmake.dir/Core/Src/main.c.obj CMakeFiles/100_pin_cmake.dir/Core/Src/gpio.c.obj CMakeFiles/100_pin_cmake.dir/Core/Src/adc.c.obj CMakeFiles/100_pin_cmake.dir/Core/Src/comp.c.obj CMakeFiles/100_pin_cmake.dir/Core/Src/dac.c.obj CMakeFiles/100_pin_cmake.dir/Core/Src/dma.c.obj CMakeFiles/100_pin_cmake.dir/Core/Src/fdcan.c.obj CMakeFiles/100_pin_cmake.dir/Core/Src/hrtim.c.obj CMakeFiles/100_pin_cmake.dir/Core/Src/i2c.c.obj CMakeFiles/100_pin_cmake.dir/Core/Src/opamp.c.obj CMakeFiles/100_pin_cmake.dir/Core/Src/spi.c.obj CMakeFiles/100_pin_cmake.dir/Core/Src/tim.c.obj CMakeFiles/100_pin_cmake.dir/Core/Src/usart.c.obj CMakeFiles/100_pin_cmake.dir/Core/Src/stm32g4xx_it.c.obj CMakeFiles/100_pin_cmake.dir/Core/Src/stm32g4xx_hal_msp.c.obj CMakeFiles/100_pin_cmake.dir/Core/Src/sysmem.c.obj CMakeFiles/100_pin_cmake.dir/Core/Src/syscalls.c.obj CMakeFiles/100_pin_cmake.dir/Core/Src/DPC_Application.c.obj CMakeFiles/100_pin_cmake.dir/startup_stm32g474xx.s.obj CMakeFiles/100_pin_cmake.dir/Drivers/BSP/DPC_FW_PACK/Src/DPC_CommonData.c.obj CMakeFiles/100_pin_cmake.dir/Drivers/BSP/DPC_FW_PACK/Src/DPC_FSM.c.obj CMakeFiles/100_pin_cmake.dir/Drivers/BSP/DPC_FW_PACK/Src/DPC_Faulterror.c.obj CMakeFiles/100_pin_cmake.dir/Drivers/BSP/DPC_FW_PACK/Src/DPC_LUT.c.obj CMakeFiles/100_pin_cmake.dir/Drivers/BSP/DPC_FW_PACK/Src/DPC_Loopctrl.c.obj CMakeFiles/100_pin_cmake.dir/Drivers/BSP/DPC_FW_PACK/Src/DPC_Math.c.obj CMakeFiles/100_pin_cmake.dir/Drivers/BSP/DPC_FW_PACK/Src/DPC_Pid.c.obj CMakeFiles/100_pin_cmake.dir/Drivers/BSP/DPC_FW_PACK/Src/DPC_Telemetry.c.obj CMakeFiles/100_pin_cmake.dir/Drivers/BSP/DPC_FW_PACK/Src/DPC_Timeout.c.obj || cmake/stm32cubemx/STM32_Drivers
   CONFIG = Debug
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3
-  LINK_FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -T "C:/Repo/PFC_100PIN_CMAKE/STM32G474XX_FLASH.ld" --specs=nano.specs -Wl,-Map=100_pin_cmake.map -Wl,--gc-sections -Wl,--print-memory-usage
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2
+  LINK_FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -T "C:/Repo/PFC_100PIN_CMAKE/STM32G474XX_FLASH.ld" --specs=nano.specs -Wl,-Map=100_pin_cmake.map -Wl,--gc-sections -Wl,--print-memory-usage -Wl,--no-warn-rwx-segments
   LINK_LIBRARIES = -lm  -lDPC_AverageCurrentControl
   LINK_PATH = -LC:/Repo/PFC_100PIN_CMAKE/Drivers/BSP/DPC_FW_PACK/Lib
   OBJECT_DIR = CMakeFiles\100_pin_cmake.dir
@@ -326,7 +326,7 @@ build 100_pin_cmake.elf: C_EXECUTABLE_LINKER__100_pin_cmake_Debug cmake/stm32cub
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Repo\PFC_100PIN_CMAKE\build\Debug && C:\ST\STM32CubeCLT_1.18.0\CMake\bin\cmake-gui.exe -SC:\Repo\PFC_100PIN_CMAKE -BC:\Repo\PFC_100PIN_CMAKE\build\Debug"
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Repo\PFC_100PIN_CMAKE\build\Debug && C:\ST\STM32CubeCLT_1.19.0\CMake\bin\cmake-gui.exe -SC:\Repo\PFC_100PIN_CMAKE -BC:\Repo\PFC_100PIN_CMAKE\build\Debug"
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -363,7 +363,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Core\Src\system_stm32g4xx.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Core\Src
@@ -372,7 +372,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_adc.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
@@ -381,7 +381,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_adc_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
@@ -390,7 +390,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_adc.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
@@ -399,7 +399,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
@@ -408,7 +408,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_rcc.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
@@ -417,7 +417,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_rcc_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
@@ -426,7 +426,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
@@ -435,7 +435,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
@@ -444,7 +444,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash_ramfunc.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
@@ -453,7 +453,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_gpio.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
@@ -462,7 +462,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_exti.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
@@ -471,7 +471,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dma.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
@@ -480,7 +480,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dma_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
@@ -489,7 +489,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pwr.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
@@ -498,7 +498,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pwr_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
@@ -507,7 +507,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_cortex.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
@@ -516,7 +516,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_comp.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
@@ -525,7 +525,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dac.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
@@ -534,7 +534,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dac_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
@@ -543,7 +543,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_fdcan.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
@@ -552,7 +552,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_hrtim.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
@@ -561,7 +561,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_i2c.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
@@ -570,7 +570,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_i2c_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
@@ -579,7 +579,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_opamp.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
@@ -588,7 +588,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_opamp_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
@@ -597,7 +597,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_spi.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
@@ -606,7 +606,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_spi_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
@@ -615,7 +615,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_tim.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
@@ -624,7 +624,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_tim_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
@@ -633,7 +633,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_uart.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
@@ -642,7 +642,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_uart_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -gdwarf-2 -std=gnu11
   INCLUDES = -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Core/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Repo/PFC_100PIN_CMAKE/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
@@ -659,7 +659,7 @@ build cmake/stm32cubemx/STM32_Drivers: phony cmake/stm32cubemx/CMakeFiles/STM32_
 # Utility command for edit_cache
 
 build cmake/stm32cubemx/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Repo\PFC_100PIN_CMAKE\build\Debug\cmake\stm32cubemx && C:\ST\STM32CubeCLT_1.18.0\CMake\bin\cmake-gui.exe -SC:\Repo\PFC_100PIN_CMAKE -BC:\Repo\PFC_100PIN_CMAKE\build\Debug"
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Repo\PFC_100PIN_CMAKE\build\Debug\cmake\stm32cubemx && C:\ST\STM32CubeCLT_1.19.0\CMake\bin\cmake-gui.exe -SC:\Repo\PFC_100PIN_CMAKE -BC:\Repo\PFC_100PIN_CMAKE\build\Debug"
   DESC = Running CMake cache editor...
   pool = console
   restat = 1

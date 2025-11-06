@@ -11,20 +11,101 @@
             "executable": "./build/Debug/100_pin_cmake.elf",
             "request": "launch",
             "type": "cortex-debug",
-            "runToEntryPoint": "main",
             "servertype": "jlink",
             "serverpath": "C:/Program Files/SEGGER/JLink_V874a/JLinkGDBServerCL.exe",
-            "serverArgs": [],
+            "gdbPath": "C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gdb.exe",
+            "serverArgs": ["-if", "SWD", "-speed", "4000", "-noir"],
             "device": "STM32G474VC",
             "interface": "swd",
-            "serialNumber": "", //If you have more than one J-Link probe, add the serial number here.
+            "serialNumber": "",
             "svdFile": "C:/ST/STM32CubeCLT_1.19.0/STMicroelectronics_CMSIS_SVD/STM32G474.svd",
+            "armToolchainPath": "C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin",
+            "preLaunchTask": "",
+            "showDevDebugOutput": "both",
+            "breakAfterReset": true,
+            "loadFiles": ["./build/Debug/100_pin_cmake.elf"],
+            "postLaunchCommands": [
+                "monitor halt",
+                "monitor reset",
+                "load",
+                "monitor reset",
+                "break main",
+                "continue"
+            ],
+            "swoConfig": {
+                "enabled": false
+            },
             "liveWatch": {
                     "enabled": true,
-                    "samplesPerSecond": 4 // Optional: Adjust the update rate
-                }
-
-            //"armToolchainPath": "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/12.3 rel1/bin"
+                    "samplesPerSecond": 4
+            }
+        },
+        {
+            "name": "Cortex Debug (Attach)",
+            "cwd": "${workspaceFolder}",
+            "executable": "./build/Debug/100_pin_cmake.elf",
+            "request": "attach",
+            "type": "cortex-debug",
+            "servertype": "jlink",
+            "serverpath": "C:/Program Files/SEGGER/JLink_V874a/JLinkGDBServerCL.exe",
+            "device": "STM32G474VC",
+            "interface": "swd",
+            "svdFile": "C:/ST/STM32CubeCLT_1.19.0/STMicroelectronics_CMSIS_SVD/STM32G474.svd",
+            "armToolchainPath": "C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin",
+            "showDevDebugOutput": "both"
+        },
+        {
+            "name": "Cortex Debug (Manual Control)",
+            "cwd": "${workspaceFolder}",
+            "executable": "./build/Debug/100_pin_cmake.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "jlink",
+            "serverpath": "C:/Program Files/SEGGER/JLink_V874a/JLinkGDBServerCL.exe",
+            "gdbPath": "C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gdb.exe",
+            "device": "STM32G474VC",
+            "interface": "swd",
+            "svdFile": "C:/ST/STM32CubeCLT_1.19.0/STMicroelectronics_CMSIS_SVD/STM32G474.svd",
+            "armToolchainPath": "C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin",
+            "showDevDebugOutput": "both",
+            "overrideRestartCommands": [
+                "monitor reset",
+                "monitor halt",
+                "load",
+                "monitor reset",
+                "monitor halt"
+            ]
+        },
+        {
+            "name": "Cortex Debug (Force Flash & Halt)",
+            "cwd": "${workspaceFolder}",
+            "executable": "./build/Debug/100_pin_cmake.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "jlink",
+            "serverpath": "C:/Program Files/SEGGER/JLink_V874a/JLinkGDBServerCL.exe",
+            "gdbPath": "C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gdb.exe",
+            "device": "STM32G474VC",
+            "interface": "swd",
+            "svdFile": "C:/ST/STM32CubeCLT_1.19.0/STMicroelectronics_CMSIS_SVD/STM32G474.svd",
+            "armToolchainPath": "C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin",
+            "showDevDebugOutput": "raw",
+            "rttConfig": {
+                "enabled": false
+            },
+            "preLaunchCommands": [
+                "set mem inaccessible-by-default off",
+                "set remotetimeout 10"
+            ],
+            "postLaunchCommands": [
+                "monitor halt",
+                "monitor reset",
+                "load",
+                "monitor reset",
+                "monitor halt",
+                "monitor reg r15 = 0x0800C2B8",
+                "continue"
+            ]
         }
     ]
 }
