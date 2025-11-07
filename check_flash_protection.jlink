@@ -1,0 +1,16 @@
+// Check STM32G4 Flash protection status
+si SWD
+speed 4000
+connect
+h
+echo Checking Flash protection status...
+echo.
+echo FLASH_OPTR (Option Bytes):
+mem32 0x40022020 1
+echo.
+echo FLASH_CR (Flash Control Register):
+mem32 0x40022014 1
+echo.
+echo If RDP (Read Protection) is not 0xAA, Flash may be protected
+echo Checking RDP level in FLASH_OPTR bits [7:0]...
+q

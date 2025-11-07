@@ -1,0 +1,117 @@
+// Comprehensive STM32G4 Clock Diagnosis Script
+// This script checks all clock-related registers and hardware state
+
+si SWD
+speed 4000
+connect
+h
+
+echo ====================================================
+echo   STM32G4 Clock Configuration Diagnosis
+echo ====================================================
+echo.
+
+// Check RCC Control Register (RCC_CR)
+echo [1] RCC_CR (0x40021000) - Clock Control Register:
+mem32 0x40021000 1
+echo   Bit 8  (HSION):   Internal HSI oscillator ON
+echo   Bit 10 (HSIRDY):  Internal HSI ready flag (1=ready)
+echo   Bit 16 (HSEON):   External HSE oscillator ON
+echo   Bit 17 (HSERDY):  External HSE ready flag (1=ready) **CRITICAL**
+echo   Bit 24 (PLLON):   PLL enabled
+echo   Bit 25 (PLLRDY):  PLL ready flag (1=ready)
+echo.
+
+// Check RCC Configuration Register (RCC_CFGR)
+echo [2] RCC_CFGR (0x40021008) - Clock Configuration Register:
+mem32 0x40021008 1
+echo   Bits 2:0  (SW):    System clock switch (0=HSI, 1=HSE, 3=PLL)
+echo   Bits 5:3  (SWS):   System clock switch status
+echo   Bits 7:4  (HPRE):  AHB prescaler
+echo   Bits 10:8 (PPRE1): APB1 prescaler
+echo   Bits 13:11(PPRE2): APB2 prescaler
+echo.
+
+// Check PLL Configuration Register (RCC_PLLCFGR)
+echo [3] RCC_PLLCFGR (0x4002100C) - PLL Configuration:
+mem32 0x4002100C 1
+echo   Bits 1:0  (PLLSRC): PLL source (1=HSI, 2=HSE)
+echo   Bits 6:4  (PLLM):   PLL M divider (1-8)
+echo   Bits 14:8 (PLLN):   PLL N multiplier (8-127)
+echo   Bit 16    (PLLPEN): PLLP output enable
+echo   Bits 21:17(PLLP):   PLLP divider
+echo   Bit 20    (PLLQEN): PLLQ output enable
+echo   Bits 24:21(PLLQ):   PLLQ divider
+echo   Bit 24    (PLLREN): PLLR output enable (system clock)
+echo   Bits 26:25(PLLR):   PLLR divider
+echo.
+
+// Check RCC Clock Interrupt Register
+echo [4] RCC_CIER/CIFR (0x40021018/0x4002101C) - Clock Interrupts:
+echo RCC_CIER (Interrupt Enable):
+mem32 0x40021018 1
+echo RCC_CIFR (Interrupt Flags):
+mem32 0x4002101C 1
+echo   Bit 3 (CSSF): Clock Security System failure (1=HSE failed!)
+echo.
+
+// Check Flash Registers (important for clock config)
+echo [5] FLASH_ACR (0x40022000) - Flash Access Control:
+mem32 0x40022000 1
+echo   Bits 2:0 (LATENCY): Flash wait states (should be 4 for 170MHz)
+echo.
+
+// Check Option Bytes (may affect boot and clock)
+echo [6] FLASH_OPTR (0x40022020) - Option Bytes:
+mem32 0x40022020 1
+echo   Bits 7:0  (RDP):      Read Protection (0xAA=Level 0, other=protected)
+echo   Bit 24    (nBOOT_SEL): Boot selection (1=ignore BOOT0 pin)
+echo   Bit 27    (nBOOT0):    Boot config (1=boot from Flash)
+echo.
+
+// Check if device is in reset or has faults
+echo [7] System Control Block Registers:
+echo SCB_CPUID (0xE000ED00):
+mem32 0xE000ED00 1
+echo SCB_ICSR (0xE000ED04) - Interrupt Control State:
+mem32 0xE000ED04 1
+echo SCB_VTOR (0xE000ED08) - Vector Table Offset:
+mem32 0xE000ED08 1
+echo.
+
+// Check for stuck in fault handler
+echo [8] Fault Status Registers:
+echo SCB_CFSR (0xE000ED28) - Configurable Fault Status:
+mem32 0xE000ED28 1
+echo SCB_HFSR (0xE000ED2C) - HardFault Status:
+mem32 0xE000ED2C 1
+echo.
+
+// Check current PC and stack
+echo [9] Current Execution State:
+echo Program Counter (PC):
+reg PC
+echo Stack Pointer (SP):
+reg SP
+echo Link Register (LR):
+reg LR
+echo.
+
+// GPIO Configuration for HSE pins (PF0/PF1)
+echo [10] GPIO Port F (HSE pins) - GPIOF_MODER (0x48001400):
+mem32 0x48001400 1
+echo   For 24MHz HSE on PF0/PF1, these should be in analog/alternate mode
+echo.
+
+echo ====================================================
+echo   Diagnosis Complete
+echo ====================================================
+echo.
+echo INTERPRETATION:
+echo   - If HSERDY (bit 17 in RCC_CR) = 0: HSE oscillator failed to start
+echo   - If CSSF (bit 3 in RCC_CIFR) = 1: Clock Security System detected HSE failure
+echo   - Check if your hardware has a 24MHz crystal on OSC_IN/OSC_OUT (PF0/PF1)
+echo   - If no external crystal: modify code to use HSI instead of HSE
+echo.
+
+q

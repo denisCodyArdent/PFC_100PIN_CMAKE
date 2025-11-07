@@ -1,0 +1,72 @@
+STM32G4 Clock Diagnostic Results
+================================
+Date: 2025-10-30
+
+CRITICAL FINDINGS:
+==================
+
+1. PC (Program Counter) = 0x0800C3D4
+   LR (Link Register) = 0x0800C39B
+   --> Code is STUCK in a loop (PC not progressing)
+   --> PRIMASK = 01 (Interrupts DISABLED)
+
+2. RCC_CR (0x40021000) = 0x00010500
+   Binary: 0000 0000 0000 0001 0000 0101 0000 0000
+
+   Analysis:
+   - Bit 8  (HSION):   1 = HSI oscillator ENABLED ✓
+   - Bit 10 (HSIRDY):  1 = HSI ready ✓
+   - Bit 16 (HSEON):   0 = HSE oscillator NOT ENABLED ✗
+   - Bit 17 (HSERDY):  0 = HSE NOT READY ✗✗✗ **CRITICAL**
+   - Bit 24 (PLLON):   0 = PLL NOT ENABLED ✗
+   - Bit 25 (PLLRDY):  0 = PLL NOT READY ✗
+
+   **VERDICT**: HSE NEVER STARTED. System tried to enable HSE but it failed!
+
+3. RCC_CFGR (0x40021008) = 0x00000005
+   Binary: 0000 0000 0000 0000 0000 0000 0000 0101
+
+   Analysis:
+   - Bits 2:0  (SW):   5 = Invalid/transitional state?
+   - Bits 5:3  (SWS):  0 = System clock is HSI (fallback)
+
+   **VERDICT**: System fell back to HSI after HSE failed
+
+4. RCC_PLLCFGR (0x4002100C) = 0x00001000
+   **VERDICT**: PLL never configured (reset value)
+
+5. RCC_CIFR (0x4002101C) = 0x00000000
+   - Bit 3 (CSSF): 0 = No Clock Security System failure (CSS probably not enabled)
+
+6. FLASH_ACR (0x40022000) = 0x00040601
+   - Bits 2:0 (LATENCY): 1 = Only 1 wait state
+   **ISSUE**: This is correct for 16 MHz (HSI) but was supposed to be 4 for 150MHz!
+
+7. FLASH_OPTR (0x40022020) = 0xFFEFF8AA
+   - Bits 7:0 (RDP): 0xAA = Read Protection Level 0 ✓
+   - Option bytes are OK
+
+8. GPIOF_MODER (0x48001400) = 0xFFFFFFFF
+   - This is RESET VALUE (all pins in analog mode)
+   **ISSUE**: PF0/PF1 were never configured for HSE!
+
+ROOT CAUSE CONFIRMED:
+=====================
+The HSE oscillator (24 MHz external crystal) FAILED TO START because:
+
+1. **HARDWARE ISSUE**: No 24MHz crystal is present on PF0/PF1 OR
+2. **HARDWARE ISSUE**: Crystal is present but not oscillating (bad caps, poor layout) OR
+3. **SOFTWARE ISSUE**: GPIO pins never configured (unlikely, should be automatic)
+
+The code is STUCK in Error_Handler() infinite loop at 0x0800C3D4 with:
+- Interrupts disabled (PRIMASK=1)
+- System running on backup HSI at 16MHz
+- PC not progressing (infinite while loop)
+
+NEXT STEPS:
+===========
+1. Check if your STM32G474VC board physically has a 24MHz crystal
+2. If NO external crystal exists --> SWITCH TO HSI in software
+3. If crystal exists --> Debug hardware (check soldering, capacitors, PCB traces)
+
+The fix is to modify main.c to use HSI instead of HSE.

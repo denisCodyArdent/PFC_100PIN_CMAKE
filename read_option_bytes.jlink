@@ -1,0 +1,11 @@
+// Read STM32G4 Option Bytes
+si SWD
+speed 4000
+connect
+h
+echo Reading FLASH_OPTR register (Option Bytes):
+mem32 0x40022020 1
+echo.
+echo Bit 24 (nBOOT_SEL): 1 = ignore BOOT0 pin, 0 = use BOOT0 pin
+echo Bit 27 (nBOOT0): 1 = boot from Flash, 0 = boot from System Memory
+q

@@ -1,0 +1,42 @@
+// STM32G4 Option Bytes Configuration
+// Force boot from Flash memory regardless of BOOT0 pin
+
+// Connect to target
+si SWD
+speed 4000
+connect
+
+// Halt the CPU
+h
+
+// Read current option bytes (FLASH_OPTR register at 0x40022020)
+mem32 0x40022020 1
+
+// Unlock FLASH_OPTKEYR register (0x40022008)
+w4 0x40022008 0x08192A3B
+w4 0x40022008 0x4C5D6E7F
+
+// Set nBOOT_SEL = 1 (bit 24) and nBOOT0 = 1 (bit 27) in FLASH_OPTR
+// This forces boot from Flash memory
+// Original value | 0x09000000 sets both bits
+w4 0x40022020 0xFBEFF8AA
+
+// Trigger option bytes reload by setting OPTSTRT bit in FLASH_CR
+w4 0x40022014 0x00020000
+
+// Wait for operation to complete
+sleep 100
+
+// Lock option bytes
+w4 0x40022014 0x80000000
+
+// Read back option bytes to verify
+mem32 0x40022020 1
+
+// Reset to apply changes
+r
+
+echo Option bytes configured for Flash boot
+echo Device will now always boot from Flash memory
+
+q
